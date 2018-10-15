@@ -15,6 +15,13 @@
 		7FD96E2C217315D800709701 /* Solution345.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E2B217315D800709701 /* Solution345.swift */; };
 		7FD96E2E217316D900709701 /* Solution345Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E2D217316D900709701 /* Solution345Test.swift */; };
 		7FD96E2F217316F800709701 /* Solution345.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E2B217315D800709701 /* Solution345.swift */; };
+		7FD96E322174123700709701 /* Solution344.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E312174123700709701 /* Solution344.swift */; };
+		7FD96E342174134A00709701 /* Solution541.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E332174134A00709701 /* Solution541.swift */; };
+		7FD96E3621741FA200709701 /* Solution541Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E3521741FA200709701 /* Solution541Test.swift */; };
+		7FD96E3721741FE800709701 /* Solution541.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E332174134A00709701 /* Solution541.swift */; };
+		7FD96E3921742BC700709701 /* Solution557.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E3821742BC700709701 /* Solution557.swift */; };
+		7FD96E3B217455C200709701 /* Solution557Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E3A217455C200709701 /* Solution557Test.swift */; };
+		7FD96E3C217455DF00709701 /* Solution557.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E3821742BC700709701 /* Solution557.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +46,11 @@
 		7FD96E282173142700709701 /* Solution917Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Solution917Test.swift; path = UnitTest/Solution917Test.swift; sourceTree = "<group>"; };
 		7FD96E2B217315D800709701 /* Solution345.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution345.swift; sourceTree = "<group>"; };
 		7FD96E2D217316D900709701 /* Solution345Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Solution345Test.swift; path = UnitTest/Solution345Test.swift; sourceTree = "<group>"; };
+		7FD96E312174123700709701 /* Solution344.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution344.swift; sourceTree = "<group>"; };
+		7FD96E332174134A00709701 /* Solution541.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution541.swift; sourceTree = "<group>"; };
+		7FD96E3521741FA200709701 /* Solution541Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Solution541Test.swift; path = UnitTest/Solution541Test.swift; sourceTree = "<group>"; };
+		7FD96E3821742BC700709701 /* Solution557.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution557.swift; sourceTree = "<group>"; };
+		7FD96E3A217455C200709701 /* Solution557Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Solution557Test.swift; path = UnitTest/Solution557Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,11 @@
 				7FD96E282173142700709701 /* Solution917Test.swift */,
 				7FD96E2B217315D800709701 /* Solution345.swift */,
 				7FD96E2D217316D900709701 /* Solution345Test.swift */,
+				7FD96E312174123700709701 /* Solution344.swift */,
+				7FD96E332174134A00709701 /* Solution541.swift */,
+				7FD96E3521741FA200709701 /* Solution541Test.swift */,
+				7FD96E3821742BC700709701 /* Solution557.swift */,
+				7FD96E3A217455C200709701 /* Solution557Test.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -186,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD96E3921742BC700709701 /* Solution557.swift in Sources */,
+				7FD96E322174123700709701 /* Solution344.swift in Sources */,
 				7FD96E18217308D600709701 /* Solution917.swift in Sources */,
 				7FD96E112173070800709701 /* main.swift in Sources */,
+				7FD96E342174134A00709701 /* Solution541.swift in Sources */,
 				7FD96E2C217315D800709701 /* Solution345.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,10 +216,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD96E3C217455DF00709701 /* Solution557.swift in Sources */,
 				7FD96E2A217314CA00709701 /* Solution917.swift in Sources */,
+				7FD96E3621741FA200709701 /* Solution541Test.swift in Sources */,
 				7FD96E2E217316D900709701 /* Solution345Test.swift in Sources */,
 				7FD96E292173142700709701 /* Solution917Test.swift in Sources */,
 				7FD96E2F217316F800709701 /* Solution345.swift in Sources */,
+				7FD96E3721741FE800709701 /* Solution541.swift in Sources */,
+				7FD96E3B217455C200709701 /* Solution557Test.swift in Sources */,
 				7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
