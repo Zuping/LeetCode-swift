@@ -16,6 +16,7 @@ class Solution557Test: XCTestCase {
         assert(rs == "s'teL ekat edoCteeL tsetnoc")
     }
     
+    
     func test4() {
         let s = Solution557()
         let rs = s.reverseWords("a")
