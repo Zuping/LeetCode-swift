@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6541B82176836900DB2813 /* Solution645.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541B72176836900DB2813 /* Solution645.swift */; };
+		7F6541BA2176843A00DB2813 /* Solution645Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541B92176843A00DB2813 /* Solution645Test.swift */; };
+		7F6541BB2176844400DB2813 /* Solution645.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541B72176836900DB2813 /* Solution645.swift */; };
+		7F6541BD21768CF000DB2813 /* Solution299.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541BC21768CF000DB2813 /* Solution299.swift */; };
+		7F6541BF2176906A00DB2813 /* Solution299Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541BE2176906A00DB2813 /* Solution299Test.swift */; };
+		7F6541C02176907100DB2813 /* Solution299.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541BC21768CF000DB2813 /* Solution299.swift */; };
+		7F6541C22176964A00DB2813 /* Solution739.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541C12176964A00DB2813 /* Solution739.swift */; };
+		7F6541C42176971F00DB2813 /* Solution739Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541C32176971F00DB2813 /* Solution739Test.swift */; };
+		7F6541C52176973700DB2813 /* Solution739.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6541C12176964A00DB2813 /* Solution739.swift */; };
 		7FD96E112173070800709701 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E102173070800709701 /* main.swift */; };
 		7FD96E18217308D600709701 /* Solution917.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E17217308D600709701 /* Solution917.swift */; };
 		7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E21217313C000709701 /* LeetCodeTest.swift */; };
@@ -46,6 +55,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F6541B72176836900DB2813 /* Solution645.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution645.swift; sourceTree = "<group>"; };
+		7F6541B92176843A00DB2813 /* Solution645Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution645Test.swift; sourceTree = "<group>"; };
+		7F6541BC21768CF000DB2813 /* Solution299.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution299.swift; sourceTree = "<group>"; };
+		7F6541BE2176906A00DB2813 /* Solution299Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution299Test.swift; sourceTree = "<group>"; };
+		7F6541C12176964A00DB2813 /* Solution739.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution739.swift; sourceTree = "<group>"; };
+		7F6541C32176971F00DB2813 /* Solution739Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution739Test.swift; sourceTree = "<group>"; };
 		7FD96E0D2173070800709701 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD96E102173070800709701 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7FD96E17217308D600709701 /* Solution917.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution917.swift; sourceTree = "<group>"; };
@@ -110,7 +125,9 @@
 			children = (
 				7FD96E412174DBC500709701 /* UnitTest */,
 				7FD96E102173070800709701 /* main.swift */,
-				7FD96E17217308D600709701 /* Solution917.swift */,
+				7F6541C12176964A00DB2813 /* Solution739.swift */,
+				7FD96E4921759C1F00709701 /* Solution137.swift */,
+				7F6541BC21768CF000DB2813 /* Solution299.swift */,
 				7FD96E2B217315D800709701 /* Solution345.swift */,
 				7FD96E3D2174D94B00709701 /* Solution389.swift */,
 				7FD96E312174123700709701 /* Solution344.swift */,
@@ -119,7 +136,8 @@
 				7FD96E4321758CE800709701 /* Solution136.swift */,
 				7FD96E4521758F5700709701 /* Solution268.swift */,
 				7FD96E472175903000709701 /* Solution287.swift */,
-				7FD96E4921759C1F00709701 /* Solution137.swift */,
+				7F6541B72176836900DB2813 /* Solution645.swift */,
+				7FD96E17217308D600709701 /* Solution917.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -142,6 +160,9 @@
 				7FD96E3A217455C200709701 /* Solution557Test.swift */,
 				7FD96E282173142700709701 /* Solution917Test.swift */,
 				7FD96E4B21759D8A00709701 /* Solution137Test.swift */,
+				7F6541B92176843A00DB2813 /* Solution645Test.swift */,
+				7F6541BE2176906A00DB2813 /* Solution299Test.swift */,
+				7F6541C32176971F00DB2813 /* Solution739Test.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -238,12 +259,15 @@
 				7FD96E322174123700709701 /* Solution344.swift in Sources */,
 				7FD96E18217308D600709701 /* Solution917.swift in Sources */,
 				7FD96E4421758CE800709701 /* Solution136.swift in Sources */,
+				7F6541B82176836900DB2813 /* Solution645.swift in Sources */,
 				7FD96E112173070800709701 /* main.swift in Sources */,
 				7FD96E342174134A00709701 /* Solution541.swift in Sources */,
 				7FD96E3E2174D94B00709701 /* Solution389.swift in Sources */,
 				7FD96E2C217315D800709701 /* Solution345.swift in Sources */,
 				7FD96E4A21759C1F00709701 /* Solution137.swift in Sources */,
+				7F6541C22176964A00DB2813 /* Solution739.swift in Sources */,
 				7FD96E482175903000709701 /* Solution287.swift in Sources */,
+				7F6541BD21768CF000DB2813 /* Solution299.swift in Sources */,
 				7FD96E4621758F5700709701 /* Solution268.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6541BA2176843A00DB2813 /* Solution645Test.swift in Sources */,
+				7F6541BF2176906A00DB2813 /* Solution299Test.swift in Sources */,
+				7F6541BB2176844400DB2813 /* Solution645.swift in Sources */,
 				7FD96E4C21759D8A00709701 /* Solution137Test.swift in Sources */,
 				7FD96E3C217455DF00709701 /* Solution557.swift in Sources */,
 				7FD96E2A217314CA00709701 /* Solution917.swift in Sources */,
@@ -263,7 +290,10 @@
 				7FD96E4D21759DAE00709701 /* Solution137.swift in Sources */,
 				7FD96E2F217316F800709701 /* Solution345.swift in Sources */,
 				7FD96E3721741FE800709701 /* Solution541.swift in Sources */,
+				7F6541C52176973700DB2813 /* Solution739.swift in Sources */,
 				7FD96E3B217455C200709701 /* Solution557Test.swift in Sources */,
+				7F6541C02176907100DB2813 /* Solution299.swift in Sources */,
+				7F6541C42176971F00DB2813 /* Solution739Test.swift in Sources */,
 				7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

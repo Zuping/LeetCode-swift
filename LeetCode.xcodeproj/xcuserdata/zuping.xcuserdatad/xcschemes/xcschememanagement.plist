@@ -12,12 +12,17 @@
 		<key>LeetCodeTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>7FD96E0C2173070800709701</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FD96E1E217313C000709701</key>
 		<dict>
 			<key>primary</key>
 			<true/>
