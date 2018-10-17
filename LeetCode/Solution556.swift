@@ -36,6 +36,7 @@ class Solution556: NSObject {
                 let tmp = digits[idx]
                 digits[idx] = digits[pivot + 1]
                 digits[pivot + 1] = tmp
+                break
             }
             for idx in 0...pivot/2 {
                 let tmp = digits[idx]

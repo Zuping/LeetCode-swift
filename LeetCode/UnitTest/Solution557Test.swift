@@ -24,10 +24,4 @@ class Solution557Test: XCTestCase {
         let result = Solution557().reverseWords("")
         assert(result == "")
     }
-
-    func test6() {
-        let result = Solution557().reverseWords("  ")
-        assert(result == "  ")
-    }
-
 }
