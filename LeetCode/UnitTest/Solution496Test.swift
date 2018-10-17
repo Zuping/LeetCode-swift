@@ -15,7 +15,7 @@ class Solution496Test: XCTestCase {
         let result = solution.nextGreaterElement([4, 1, 2], [1, 3, 4, 2])
         let expectedResult = [-1, 3, -1]
         for idx in 0...result.count - 1 {
-            assert(result[i] == expectedResult[idx])
+            assert(result[idx] == expectedResult[idx])
         }
     }
 
@@ -24,7 +24,7 @@ class Solution496Test: XCTestCase {
         let result = solution.nextGreaterElement([2, 4], [1, 2, 3, 4])
         let expectedResult = [3, -1]
         for idx in 0...result.count - 1 {
-            assert(result[i] == expectedResult[idx])
+            assert(result[idx] == expectedResult[idx])
         }
     }
 
