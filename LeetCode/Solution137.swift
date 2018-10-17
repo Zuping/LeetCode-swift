@@ -13,18 +13,13 @@ class Solution137: NSObject {
         var bits = Array(repeating: 0, count: 32)
         for num in nums {
             let smallInt = Int32(num)
-            for i in (0...31).reversed() {
-                if ((smallInt >> i) & 1) == 1 {
-                    bits[i] += 1
-                }
+            for idx in (0...31).reversed() where ((smallInt >> idx) & 1) == 1 {
+                bits[idx] += 1
             }
         }
-        
         var result = Int32(0)
-        for i in 0...31 {
-            if bits[i] % 3 == 1 {
-                result |= (1 << i)
-            }
+        for idx in 0...31 where bits[idx] % 3 == 1 {
+            result |= (1 << idx)
         }
         return Int(result)
     }

@@ -11,16 +11,14 @@ import XCTest
 class Solution389Test: XCTestCase {
 
     func test1() {
-        let s = Solution389()
-        let rs = s.findTheDifference("abcd", "abcde")
-        assert(rs == "e")
+        let solution = Solution389()
+        let result = solution.findTheDifference("abcd", "abcde")
+        assert(result == "e")
     }
-    
+
     func test2() {
-        let s = Solution389()
-        let rs = s.findTheDifference("abcd", "aebcd")
-        assert(rs == "e")
+        let solution = Solution389()
+        let result = solution.findTheDifference("abcd", "aebcd")
+        assert(result == "e")
     }
-
-
 }

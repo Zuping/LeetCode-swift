@@ -12,10 +12,8 @@ class Solution287: NSObject {
     func findDuplicate(_ nums: [Int]) -> Int {
         var array = nums
         array.sort()
-        for i in 1..<array.count {
-            if array[i] == array[i - 1] {
-                return array[i]
-            }
+        for idx in 1..<array.count where array[idx] == array[idx - 1] {
+            return array[idx]
         }
         return -1
     }

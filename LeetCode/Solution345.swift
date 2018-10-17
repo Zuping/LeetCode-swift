@@ -9,27 +9,25 @@
 import Cocoa
 
 class Solution345: NSObject {
-    func reverseVowels(_ s: String) -> String {
-        var l = 0, r = s.count - 1
+    func reverseVowels(_ str: String) -> String {
+        var left = 0, right = str.count - 1
         let letters = Array("aeiouAEIOU")
-        var chars = Array(s)
-        while l <= r {
-            if !letters.contains(chars[l]) {
-                l += 1
+        var chars = Array(str)
+        while left <= right {
+            if !letters.contains(chars[left]) {
+                left += 1
                 continue
             }
-            if !letters.contains(chars[r]) {
-                r -= 1
+            if !letters.contains(chars[right]) {
+                right -= 1
                 continue
             }
-            let tmp = chars[l]
-            chars[l] = chars[r]
-            chars[r] = tmp
-            l += 1
-            r -= 1
+            let tmp = chars[left]
+            chars[left] = chars[right]
+            chars[right] = tmp
+            left += 1
+            right -= 1
         }
         return String(chars)
     }
-    
-    
 }

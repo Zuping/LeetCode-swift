@@ -40,6 +40,15 @@
 		7FD96E4A21759C1F00709701 /* Solution137.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E4921759C1F00709701 /* Solution137.swift */; };
 		7FD96E4C21759D8A00709701 /* Solution137Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E4B21759D8A00709701 /* Solution137Test.swift */; };
 		7FD96E4D21759DAE00709701 /* Solution137.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E4921759C1F00709701 /* Solution137.swift */; };
+		7FD96E502176BA2B00709701 /* Solution496.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E4F2176BA2B00709701 /* Solution496.swift */; };
+		7FD96E522176BD4600709701 /* Solution496Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E512176BD4600709701 /* Solution496Test.swift */; };
+		7FD96E532176BD6200709701 /* Solution496.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E4F2176BA2B00709701 /* Solution496.swift */; };
+		7FD96E552176C38100709701 /* Solution503.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E542176C38100709701 /* Solution503.swift */; };
+		7FD96E572176C5E400709701 /* Solution503Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E562176C5E400709701 /* Solution503Test.swift */; };
+		7FD96E582176C5F300709701 /* Solution503.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E542176C38100709701 /* Solution503.swift */; };
+		7FD96E5A2176DDCE00709701 /* Solution556.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E592176DDCE00709701 /* Solution556.swift */; };
+		7FD96E5C2176E13A00709701 /* Solution556Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E5B2176E13A00709701 /* Solution556Test.swift */; };
+		7FD96E5D2176E14E00709701 /* Solution556.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E592176DDCE00709701 /* Solution556.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +91,12 @@
 		7FD96E472175903000709701 /* Solution287.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution287.swift; sourceTree = "<group>"; };
 		7FD96E4921759C1F00709701 /* Solution137.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution137.swift; sourceTree = "<group>"; };
 		7FD96E4B21759D8A00709701 /* Solution137Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution137Test.swift; sourceTree = "<group>"; };
+		7FD96E4F2176BA2B00709701 /* Solution496.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution496.swift; sourceTree = "<group>"; };
+		7FD96E512176BD4600709701 /* Solution496Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution496Test.swift; sourceTree = "<group>"; };
+		7FD96E542176C38100709701 /* Solution503.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution503.swift; sourceTree = "<group>"; };
+		7FD96E562176C5E400709701 /* Solution503Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution503Test.swift; sourceTree = "<group>"; };
+		7FD96E592176DDCE00709701 /* Solution556.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution556.swift; sourceTree = "<group>"; };
+		7FD96E5B2176E13A00709701 /* Solution556Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution556Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,11 +140,14 @@
 			children = (
 				7FD96E412174DBC500709701 /* UnitTest */,
 				7FD96E102173070800709701 /* main.swift */,
+				7FD96E592176DDCE00709701 /* Solution556.swift */,
+				7FD96E542176C38100709701 /* Solution503.swift */,
 				7F6541C12176964A00DB2813 /* Solution739.swift */,
 				7FD96E4921759C1F00709701 /* Solution137.swift */,
 				7F6541BC21768CF000DB2813 /* Solution299.swift */,
 				7FD96E2B217315D800709701 /* Solution345.swift */,
 				7FD96E3D2174D94B00709701 /* Solution389.swift */,
+				7FD96E4F2176BA2B00709701 /* Solution496.swift */,
 				7FD96E312174123700709701 /* Solution344.swift */,
 				7FD96E332174134A00709701 /* Solution541.swift */,
 				7FD96E3821742BC700709701 /* Solution557.swift */,
@@ -163,6 +181,9 @@
 				7F6541B92176843A00DB2813 /* Solution645Test.swift */,
 				7F6541BE2176906A00DB2813 /* Solution299Test.swift */,
 				7F6541C32176971F00DB2813 /* Solution739Test.swift */,
+				7FD96E512176BD4600709701 /* Solution496Test.swift */,
+				7FD96E562176C5E400709701 /* Solution503Test.swift */,
+				7FD96E5B2176E13A00709701 /* Solution556Test.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -177,6 +198,7 @@
 				7FD96E092173070800709701 /* Sources */,
 				7FD96E0A2173070800709701 /* Frameworks */,
 				7FD96E0B2173070800709701 /* CopyFiles */,
+				7FD96E5E2176EDB400709701 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,16 +272,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7FD96E5E2176EDB400709701 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FD96E092173070800709701 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7FD96E3921742BC700709701 /* Solution557.swift in Sources */,
+				7FD96E552176C38100709701 /* Solution503.swift in Sources */,
 				7FD96E322174123700709701 /* Solution344.swift in Sources */,
+				7FD96E5A2176DDCE00709701 /* Solution556.swift in Sources */,
 				7FD96E18217308D600709701 /* Solution917.swift in Sources */,
 				7FD96E4421758CE800709701 /* Solution136.swift in Sources */,
 				7F6541B82176836900DB2813 /* Solution645.swift in Sources */,
+				7FD96E502176BA2B00709701 /* Solution496.swift in Sources */,
 				7FD96E112173070800709701 /* main.swift in Sources */,
 				7FD96E342174134A00709701 /* Solution541.swift in Sources */,
 				7FD96E3E2174D94B00709701 /* Solution389.swift in Sources */,
@@ -277,21 +322,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6541BA2176843A00DB2813 /* Solution645Test.swift in Sources */,
+				7FD96E572176C5E400709701 /* Solution503Test.swift in Sources */,
 				7F6541BF2176906A00DB2813 /* Solution299Test.swift in Sources */,
 				7F6541BB2176844400DB2813 /* Solution645.swift in Sources */,
 				7FD96E4C21759D8A00709701 /* Solution137Test.swift in Sources */,
+				7FD96E5D2176E14E00709701 /* Solution556.swift in Sources */,
+				7FD96E5C2176E13A00709701 /* Solution556Test.swift in Sources */,
 				7FD96E3C217455DF00709701 /* Solution557.swift in Sources */,
 				7FD96E2A217314CA00709701 /* Solution917.swift in Sources */,
 				7FD96E3621741FA200709701 /* Solution541Test.swift in Sources */,
 				7FD96E402174DBAF00709701 /* Solution389Test.swift in Sources */,
 				7FD96E2E217316D900709701 /* Solution345Test.swift in Sources */,
+				7FD96E582176C5F300709701 /* Solution503.swift in Sources */,
 				7FD96E422174DBEE00709701 /* Solution389.swift in Sources */,
 				7FD96E292173142700709701 /* Solution917Test.swift in Sources */,
 				7FD96E4D21759DAE00709701 /* Solution137.swift in Sources */,
+				7FD96E522176BD4600709701 /* Solution496Test.swift in Sources */,
 				7FD96E2F217316F800709701 /* Solution345.swift in Sources */,
 				7FD96E3721741FE800709701 /* Solution541.swift in Sources */,
 				7F6541C52176973700DB2813 /* Solution739.swift in Sources */,
 				7FD96E3B217455C200709701 /* Solution557Test.swift in Sources */,
+				7FD96E532176BD6200709701 /* Solution496.swift in Sources */,
 				7F6541C02176907100DB2813 /* Solution299.swift in Sources */,
 				7F6541C42176971F00DB2813 /* Solution739Test.swift in Sources */,
 				7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */,

@@ -9,38 +9,37 @@
 import Cocoa
 
 class Solution541: NSObject {
-    func reverseStr(_ s: String, _ k: Int) -> String {
-        if k == 1 {
-            return s
+    func reverseStr(_ str: String, _ kSpace: Int) -> String {
+        if kSpace == 1 {
+            return str
         }
-        if s.count <= k {
-            return String(s.reversed())
+        if str.count <= kSpace {
+            return String(str.reversed())
         }
-        var chars = Array(s)
-        var i = 0
-        while i * k < s.count {
-            if i % 2 == 0 {
-                if (i + 1) * k > s.count {
-                    let end = s.count - i * k - 1
-                    for ii in 0 ... (end / 2) {
-                        let left = i * k + ii
-                        let right = i * k + end - ii
+        var chars = Array(str)
+        var idx = 0
+        while idx * kSpace < str.count {
+            if idx % 2 == 0 {
+                if (idx + 1) * kSpace > str.count {
+                    let end = str.count - idx * kSpace - 1
+                    for iidx in 0 ... (end / 2) {
+                        let left = idx * kSpace + iidx
+                        let right = idx * kSpace + end - iidx
                         let tmp = chars[left]
                         chars[left] = chars[right]
                         chars[right] = tmp
                     }
                 } else {
-                    for ii in 0 ... (k / 2 - 1) {
-                        let left = i * k + ii
-                        let right = i * k + k - ii - 1
+                    for iidx in 0 ... (kSpace / 2 - 1) {
+                        let left = idx * kSpace + iidx
+                        let right = idx * kSpace + kSpace - iidx - 1
                         let tmp = chars[left]
                         chars[left] = chars[right]
                         chars[right] = tmp
                     }
                 }
-                
             }
-            i += 1
+            idx += 1
         }
         return String(chars)
     }

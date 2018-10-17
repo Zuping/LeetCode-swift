@@ -14,15 +14,15 @@ class Solution645: NSObject {
         for num in nums {
             count[num - 1] -= 1
         }
-        var a = 0, b = 0
-        for i in 0..<count.count {
-            if count[i] == 1 {
-                b = i + 1
+        var dup = 0, miss = 0
+        for idx in 0..<count.count {
+            if count[idx] == 1 {
+                miss = idx + 1
             }
-            if count[i] == -1 {
-                a = i + 1
+            if count[idx] == -1 {
+                dup = idx + 1
             }
         }
-        return [a,b]
+        return [dup, miss]
     }
 }

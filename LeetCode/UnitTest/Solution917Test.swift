@@ -11,20 +11,18 @@ import XCTest
 class Solution917Test: XCTestCase {
 
     func test1() {
-        let s = Solution917()
-        let rs = s.reverseOnlyLetters("ab-cd")
-        assert(rs == "dc-ba")
+        let solution = Solution917()
+        let result = solution.reverseOnlyLetters("ab-cd")
+        assert(result == "dc-ba")
     }
-    
+
     func test2() {
-        let s = Solution917()
-        let rs = s.reverseOnlyLetters("a-bC-dEf-ghIj")
-        assert(rs == "j-Ih-gfE-dCba")
+        let result = Solution917().reverseOnlyLetters("a-bC-dEf-ghIj")
+        assert(result == "j-Ih-gfE-dCba")
     }
-    
+
     func test3() {
-        let s = Solution917()
-        let rs = s.reverseOnlyLetters("Test1ng-Leet=code-Q!")
-        assert(rs == "Qedo1ct-eeLg=ntse-T!")
+        let result = Solution917().reverseOnlyLetters("Test1ng-Leet=code-Q!")
+        assert(result == "Qedo1ct-eeLg=ntse-T!")
     }
 }

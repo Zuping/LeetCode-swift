@@ -14,7 +14,7 @@ class Solution645Test: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
@@ -22,25 +22,25 @@ class Solution645Test: XCTestCase {
 
     func test1() {
         let solution = Solution645()
-        let result = solution.findErrorNums([1,2,2,4])
+        let result = solution.findErrorNums([1, 2, 2, 4])
         assert(result[0] == 2 && result[1] == 3)
     }
-    
+
     func test2() {
         let solution = Solution645()
-        let result = solution.findErrorNums([1,2,3,4,4])
+        let result = solution.findErrorNums([1, 2, 3, 4, 4])
         assert(result[0] == 4 && result[1] == 5)
     }
 
     func test3() {
         let solution = Solution645()
-        let result = solution.findErrorNums([2,3,4,4,5])
+        let result = solution.findErrorNums([2, 3, 4, 4, 5])
         assert(result[0] == 4 && result[1] == 1)
     }
-    
+
     func test4() {
         let solution = Solution645()
-        let result = solution.findErrorNums([1,1,2,3,4])
+        let result = solution.findErrorNums([1, 1, 2, 3, 4])
         assert(result[0] == 1 && result[1] == 5)
     }
 

@@ -11,28 +11,23 @@ import XCTest
 class Solution557Test: XCTestCase {
 
     func test1() {
-        let s = Solution557()
-        let rs = s.reverseWords("Let's take LeetCode contest")
-        assert(rs == "s'teL ekat edoCteeL tsetnoc")
+        let result = Solution557().reverseWords("Let's take LeetCode contest")
+        assert(result == "s'teL ekat edoCteeL tsetnoc")
     }
-    
-    
+
     func test4() {
-        let s = Solution557()
-        let rs = s.reverseWords("a")
-        assert(rs == "a")
+        let result = Solution557().reverseWords("a")
+        assert(result == "a")
     }
-    
+
     func test5() {
-        let s = Solution557()
-        let rs = s.reverseWords("")
-        assert(rs == "")
+        let result = Solution557().reverseWords("")
+        assert(result == "")
     }
-    
+
     func test6() {
-        let s = Solution557()
-        let rs = s.reverseWords("  ")
-        assert(rs == "  ")
+        let result = Solution557().reverseWords("  ")
+        assert(result == "  ")
     }
 
 }

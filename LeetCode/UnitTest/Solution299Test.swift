@@ -21,7 +21,7 @@ class Solution299Test: XCTestCase {
         let result = solution.getHint("1123", "0111")
         assert(result == "1A1B")
     }
-    
+
     func test3() {
         let solution = Solution299()
         let result = solution.getHint("1122", "1222")

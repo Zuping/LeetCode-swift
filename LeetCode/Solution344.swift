@@ -9,7 +9,7 @@
 import Cocoa
 
 class Solution344: NSObject {
-    func reverseString(_ s: String) -> String {
-        return String(s.reversed())
+    func reverseString(_ str: String) -> String {
+        return String(str.reversed())
     }
 }

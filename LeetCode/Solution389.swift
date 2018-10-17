@@ -9,25 +9,25 @@
 import Cocoa
 
 class Solution389: NSObject {
-    func findTheDifference(_ s: String, _ t: String) -> Character {
-        var dictionary:[Character:Int] = [:]
-        for c in s {
-            if dictionary[c] != nil {
-                dictionary[c] = dictionary[c]! + 1
+    func findTheDifference(_ str: String, _ target: String) -> Character {
+        var dictionary: [Character: Int] = [:]
+        for char in str {
+            if dictionary[char] != nil {
+                dictionary[char] = dictionary[char]! + 1
             } else {
-                dictionary[c] = 1
+                dictionary[char] = 1
             }
         }
-        for c in t {
-            if dictionary[c] != nil {
-                let count = dictionary[c]! - 1
+        for char in target {
+            if dictionary[char] != nil {
+                let count = dictionary[char]! - 1
                 if count == 0 {
-                    dictionary.removeValue(forKey: c)
+                    dictionary.removeValue(forKey: char)
                 } else {
-                    dictionary[c] = dictionary[c]! - 1
+                    dictionary[char] = dictionary[char]! - 1
                 }
             } else {
-                return c
+                return char
             }
         }
         return Character("a")

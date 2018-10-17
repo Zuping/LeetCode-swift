@@ -9,8 +9,8 @@
 import Cocoa
 
 class Solution557: NSObject {
-    func reverseWords(_ s: String) -> String {
-        let words = s.split(separator: " ")
+    func reverseWords(_ str: String) -> String {
+        let words = str.split(separator: " ")
         var result = ""
         for word in words {
             result.append(String(word.reversed()))

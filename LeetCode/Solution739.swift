@@ -13,17 +13,15 @@ class Solution739: NSObject {
         // searching backward
         var result = Array(repeating: 0, count: temperatures.count)
         var cache = Array(repeating: Int.max, count: 102)
-        for i in (0...temperatures.count - 1).reversed() {
-            var warm_index = Int.max
-            for t in temperatures[i]+1...101 {
-                if cache[t] < warm_index {
-                    warm_index = cache[t]
-                }
+        for idx in (0...temperatures.count - 1).reversed() {
+            var warmIndex = Int.max
+            for temp in temperatures[idx]+1...101 where cache[temp] < warmIndex {
+                warmIndex = cache[temp]
             }
-            if warm_index < Int.max {
-                result[i] = warm_index - i
+            if warmIndex < Int.max {
+                result[idx] = warmIndex - idx
             }
-            cache[temperatures[i]] = i
+            cache[temperatures[idx]] = idx
         }
         return result
     }
