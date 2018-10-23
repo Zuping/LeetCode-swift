@@ -15,13 +15,13 @@ class Solution31Test: XCTestCase {
         Solution31().nextPermutation(&array)
         assert(array == [1, 3, 2])
     }
-    
+
     func test2() {
         var array = [1, 3, 4, 2]
         Solution31().nextPermutation(&array)
         assert(array == [1, 4, 2, 3])
     }
-    
+
     func test3() {
         var array = [1, 3, 5, 4, 2]
         Solution31().nextPermutation(&array)

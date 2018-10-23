@@ -25,7 +25,6 @@ class Solution49: NSObject {
                 result.append([tuple.0])
             }
         }
-        
         return result
     }
 }

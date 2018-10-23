@@ -22,7 +22,7 @@ class Solution229Test: XCTestCase {
         let result = Solution229().majorityElement([3, 2, 3])
         assert(result.sorted() == [3])
     }
-    
+
     func test3() {
         let result = Solution229().majorityElement([1, 2, 2, 3, 2, 1, 1, 3])
         assert(result.sorted() == [1, 2])

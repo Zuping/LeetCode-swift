@@ -12,6 +12,7 @@ class Solution713Test: XCTestCase {
 
     func test1() {
         let result = Solution713().numSubarrayProductLessThanK([10, 5, 2, 6], 100)
+        assert(result == 8)
     }
 
 }

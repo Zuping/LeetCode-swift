@@ -15,7 +15,6 @@ class Solution216: NSObject {
         recursionHelper(kFactor, 1, number, &currentRes, &result)
         return result
     }
-    
     func recursionHelper( _ kFactor: Int, _ index: Int, _ target: Int, _ currentRes: inout [Int], _ result: inout [[Int]]) {
         if currentRes.count == kFactor {
             if target == 0 {

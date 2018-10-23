@@ -14,7 +14,6 @@ class Solution724Test: XCTestCase {
         let result = Solution724().pivotIndex([1, 7, 3, 6, 5, 6])
         assert(result == 3)
     }
-    
     func test2() {
         let result = Solution724().pivotIndex([1, 2, 3])
         assert(result == -1)

@@ -20,7 +20,6 @@ class Solution60: NSObject {
             vals[idx] = idx == 0 ? 1 : vals[idx - 1] * (idx + 1)
             nums[idx] = idx + 1
         }
-        
         var result = ""
         for idx in (0...num - 2).reversed() {
             let iidx = kth / vals[idx]

@@ -30,10 +30,8 @@ class Solution55: NSObject {
     
     func canJump2(_ nums: [Int]) -> Bool {
         var left = nums.count - 1
-        for idx in (0..<nums.count - 1).reversed() {
-            if nums[idx] + idx >= left {
-                left = idx
-            }
+        for idx in (0..<nums.count - 1).reversed() where nums[idx] + idx >= left {
+            left = idx
         }
         return left == 0
     }

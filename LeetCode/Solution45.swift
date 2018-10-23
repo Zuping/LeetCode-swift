@@ -41,7 +41,6 @@ class Solution45: NSObject {
         }
         return cnt
     }
-    
     func jump3(_ nums: [Int]) -> Int {
         var cnt = 0
         var cur = 0, pre = 0

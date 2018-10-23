@@ -10,19 +10,17 @@ import Cocoa
 
 class Solution713: NSObject {
     func numSubarrayProductLessThanK(_ nums: [Int], _ kFactor: Int) -> Int {
+        guard kFactor >= 1 else { return 0 }
         var product = 1, count = 0
         var subArray: [Int] = []
         for num in nums {
             product *= num
-            if product < kFactor {
-                subArray.append(num)
-                count += subArray.count > 1 ? 2 : 1
-            } else {
-                while product > kFactor {
-                    product = product / subArray.first!
-                    subArray.removeFirst()
-                }
+            subArray.append(num)
+            while !subArray.isEmpty && product >= kFactor {
+                product /= subArray[0]
+                subArray.removeFirst()
             }
+            count += subArray.count
         }
         return count
     }

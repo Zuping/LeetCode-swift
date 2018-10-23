@@ -36,7 +36,7 @@ class Solution46: NSObject {
             visited[idx] = false
         }
     }
-    
+
     // 两两交换
     func permute2(_ nums: [Int]) -> [[Int]] {
         var nums = nums
@@ -44,13 +44,13 @@ class Solution46: NSObject {
         permuteRecursive(&nums, 0, &result)
         return result
     }
-    
+
     func permuteRecursive(_ nums: inout [Int], _ begin: Int, _ result: inout [[Int]] ) {
         if begin >= nums.count {
             result.append(nums)
             return
         }
-        
+
         for idx in begin..<nums.count {
             nums.swapAt(begin, idx)
             permuteRecursive(&nums, begin+1, &result)

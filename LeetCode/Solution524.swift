@@ -21,9 +21,7 @@ class Solution524: NSObject {
                     idx += 1
                 }
             }
-            
             if idx != word.count { continue }
-            
             if word.count > result.count {
                 result = word
             } else if word.count == result.count && word < result {

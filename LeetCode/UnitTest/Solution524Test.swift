@@ -11,21 +11,19 @@ import XCTest
 class Solution524Test: XCTestCase {
 
     func test1() {
-        let result = Solution524().findLongestWord("abpcplea", ["ale","apple","monkey","plea"])
+        let result = Solution524().findLongestWord("abpcplea", ["ale", "apple", "monkey", "plea"])
         assert(result == "apple")
     }
     func test2() {
-        let result = Solution524().findLongestWord("abpcplea", ["a","b","c"])
+        let result = Solution524().findLongestWord("abpcplea", ["a", "b", "c"])
         assert(result == "a")
     }
-    
     func test3() {
         let result = Solution524().findLongestWord("abpcplea", [])
         assert(result == "")
     }
-    
     func test4() {
-        let result = Solution524().findLongestWord("aaa", ["aaa","aa","a"])
+        let result = Solution524().findLongestWord("aaa", ["aaa", "aa", "a"])
         assert(result == "aaa")
     }
 }

@@ -14,7 +14,6 @@ class Solution15Test: XCTestCase {
         let result = Solution15().threeSum([-1, 0, 1, 2, -1, -4])
         assert(result.count == 2)
     }
-    
     func test2() {
         let result = Solution15().threeSum([0, 0, 0, 0])
         assert(result.count == 1)

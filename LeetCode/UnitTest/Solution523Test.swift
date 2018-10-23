@@ -34,7 +34,7 @@ class Solution523Test: XCTestCase {
         let result = Solution523().checkSubarraySum([0, 0], -1)
         assert(result == true)
     }
-    
+
     func test7() {
         let result = Solution523().checkSubarraySum([0, 1, 0], -1)
         assert(result == true)

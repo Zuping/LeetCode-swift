@@ -11,7 +11,7 @@ import XCTest
 class Solution45Test: XCTestCase {
 
     func test1() {
-        let result = Solution45().jump2([2,3,1,1,4])
+        let result = Solution45().jump2([2, 3, 1, 1, 4])
         assert(result == 2)
     }
 

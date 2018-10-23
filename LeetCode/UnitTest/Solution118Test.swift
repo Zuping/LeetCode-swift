@@ -14,7 +14,7 @@ class Solution118Test: XCTestCase {
         let result = Solution118().generate(6)
         assert(result.count == 6)
     }
-    
+
     func test2() {
         let result = Solution118().generate(0)
         assert(result.count == 0)

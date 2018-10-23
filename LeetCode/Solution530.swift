@@ -22,7 +22,6 @@ class Solution530: NSObject {
         }
         return minDiff
     }
-    
     func inOrder(_ node: TreeNode?, _ array: inout [Int]) {
         if let node = node {
             inOrder(node.left, &array)

@@ -18,12 +18,12 @@ class Solution46Test: XCTestCase {
             assert(result[idx] == expectedResult[idx])
         }
     }
-    
+
     func test2() {
         let result = Solution46().permute([])
         assert(result.count == 0)
     }
-    
+
     func test3() {
         let result = Solution46().permute([1])
         assert(result.first! == [1])

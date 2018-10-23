@@ -16,7 +16,7 @@ class Solution128Test: XCTestCase {
     }
 
     func test2() {
-        let result = Solution128().longestConsecutive([-1,1,0])
+        let result = Solution128().longestConsecutive([-1, 1, 0])
         assert(result == 3)
     }
 
