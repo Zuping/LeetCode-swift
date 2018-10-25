@@ -73,6 +73,15 @@
 		7F9DBD6E217ECC5B0033671C /* Solution220.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD6D217ECC5B0033671C /* Solution220.swift */; };
 		7F9DBD6F217ECC5B0033671C /* Solution220.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD6D217ECC5B0033671C /* Solution220.swift */; };
 		7F9DBD71217ED12A0033671C /* Solution220Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD70217ED12A0033671C /* Solution220Test.swift */; };
+		7F9DBD73218027CF0033671C /* Solution217.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD72218027CF0033671C /* Solution217.swift */; };
+		7F9DBD74218027CF0033671C /* Solution217.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD72218027CF0033671C /* Solution217.swift */; };
+		7F9DBD762180288D0033671C /* Solution217Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD752180288D0033671C /* Solution217Test.swift */; };
+		7F9DBD78218029AF0033671C /* Solution219.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD77218029AF0033671C /* Solution219.swift */; };
+		7F9DBD79218029AF0033671C /* Solution219.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD77218029AF0033671C /* Solution219.swift */; };
+		7F9DBD7B21802B0E0033671C /* Solution219Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD7A21802B0E0033671C /* Solution219Test.swift */; };
+		7F9DBD7D21802C1E0033671C /* Solution718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD7C21802C1E0033671C /* Solution718.swift */; };
+		7F9DBD7E21802C1E0033671C /* Solution718.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD7C21802C1E0033671C /* Solution718.swift */; };
+		7F9DBD80218035990033671C /* Solution718Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DBD7F218035990033671C /* Solution718Test.swift */; };
 		7FA4D30F217C022C0089A31B /* Solution33Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4D30E217C022C0089A31B /* Solution33Test.swift */; };
 		7FA4D311217C04EA0089A31B /* Solution153.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4D310217C04EA0089A31B /* Solution153.swift */; };
 		7FA4D312217C04EA0089A31B /* Solution153.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4D310217C04EA0089A31B /* Solution153.swift */; };
@@ -235,6 +244,12 @@
 		7F9DBD6B217ECB2F0033671C /* Solution122Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution122Test.swift; sourceTree = "<group>"; };
 		7F9DBD6D217ECC5B0033671C /* Solution220.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution220.swift; sourceTree = "<group>"; };
 		7F9DBD70217ED12A0033671C /* Solution220Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution220Test.swift; sourceTree = "<group>"; };
+		7F9DBD72218027CF0033671C /* Solution217.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution217.swift; sourceTree = "<group>"; };
+		7F9DBD752180288D0033671C /* Solution217Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution217Test.swift; sourceTree = "<group>"; };
+		7F9DBD77218029AF0033671C /* Solution219.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution219.swift; sourceTree = "<group>"; };
+		7F9DBD7A21802B0E0033671C /* Solution219Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution219Test.swift; sourceTree = "<group>"; };
+		7F9DBD7C21802C1E0033671C /* Solution718.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution718.swift; sourceTree = "<group>"; };
+		7F9DBD7F218035990033671C /* Solution718Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution718Test.swift; sourceTree = "<group>"; };
 		7FA4D30E217C022C0089A31B /* Solution33Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution33Test.swift; sourceTree = "<group>"; };
 		7FA4D310217C04EA0089A31B /* Solution153.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution153.swift; sourceTree = "<group>"; };
 		7FA4D313217C06100089A31B /* Solution153Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution153Test.swift; sourceTree = "<group>"; };
@@ -351,6 +366,9 @@
 			children = (
 				7FD96E412174DBC500709701 /* UnitTest */,
 				7FD96E102173070800709701 /* main.swift */,
+				7F9DBD7C21802C1E0033671C /* Solution718.swift */,
+				7F9DBD77218029AF0033671C /* Solution219.swift */,
+				7F9DBD72218027CF0033671C /* Solution217.swift */,
 				7F9DBD6D217ECC5B0033671C /* Solution220.swift */,
 				7F9DBD68217ECADF0033671C /* Solution122.swift */,
 				7F9DBD63217EC70D0033671C /* Solution121.swift */,
@@ -479,6 +497,9 @@
 				7F9DBD66217EC7F50033671C /* Solution121Test.swift */,
 				7F9DBD6B217ECB2F0033671C /* Solution122Test.swift */,
 				7F9DBD70217ED12A0033671C /* Solution220Test.swift */,
+				7F9DBD752180288D0033671C /* Solution217Test.swift */,
+				7F9DBD7A21802B0E0033671C /* Solution219Test.swift */,
+				7F9DBD7F218035990033671C /* Solution718Test.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -643,11 +664,14 @@
 				7F6F04C7217E836B00B93A05 /* Solution720.swift in Sources */,
 				7F9DBD41217D67390033671C /* Solution674.swift in Sources */,
 				7FD96E82217ABA0100709701 /* Solution377.swift in Sources */,
+				7F9DBD73218027CF0033671C /* Solution217.swift in Sources */,
 				7FD96E4621758F5700709701 /* Solution268.swift in Sources */,
+				7F9DBD78218029AF0033671C /* Solution219.swift in Sources */,
 				7FD96EA8217BD56500709701 /* Solution45.swift in Sources */,
 				7F9DBD5F217EB7600033671C /* Solution152.swift in Sources */,
 				7FA4D325217C1B2A0089A31B /* Solution229.swift in Sources */,
 				7FD96E99217AEBE500709701 /* Solution561.swift in Sources */,
+				7F9DBD7D21802C1E0033671C /* Solution718.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +734,7 @@
 				7F6F04D4217E92DB00B93A05 /* Solution713Test.swift in Sources */,
 				7FD96E9B217AECAC00709701 /* Solution561Test.swift in Sources */,
 				7FD96E91217AD22000709701 /* Solution15.swift in Sources */,
+				7F9DBD74218027CF0033671C /* Solution217.swift in Sources */,
 				7FA4D314217C06100089A31B /* Solution153Test.swift in Sources */,
 				7F6541D72177B8A600DB2813 /* Solution77.swift in Sources */,
 				7FD96E522176BD4600709701 /* Solution496Test.swift in Sources */,
@@ -723,17 +748,21 @@
 				7F6541DD2177CF7D00DB2813 /* Solution47.swift in Sources */,
 				7F9DBD65217EC70D0033671C /* Solution121.swift in Sources */,
 				7FD96E2F217316F800709701 /* Solution345.swift in Sources */,
+				7F9DBD79218029AF0033671C /* Solution219.swift in Sources */,
 				7FD96E96217AD7E400709701 /* Solution16Test.swift in Sources */,
 				7FD96E6C2178383800709701 /* Solution260Test.swift in Sources */,
+				7F9DBD80218035990033671C /* Solution718Test.swift in Sources */,
 				7FD96E88217AC2AA00709701 /* Solution611.swift in Sources */,
 				7FD96E3721741FE800709701 /* Solution541.swift in Sources */,
 				7F9DBD53217D784B0033671C /* Solution334Test.swift in Sources */,
 				7F6541DB2177CF4B00DB2813 /* Solution47Test.swift in Sources */,
 				7FD96E7921798B8100709701 /* Solution40.swift in Sources */,
+				7F9DBD7E21802C1E0033671C /* Solution718.swift in Sources */,
 				7FA4D312217C04EA0089A31B /* Solution153.swift in Sources */,
 				7FD96EA4217BCDB400709701 /* Solution55.swift in Sources */,
 				7FA4D31C217C12130089A31B /* Solution560.swift in Sources */,
 				7F9DBD62217EBFC80033671C /* Solution152Test.swift in Sources */,
+				7F9DBD7B21802B0E0033671C /* Solution219Test.swift in Sources */,
 				7FD96E9C217AECD400709701 /* Solution561.swift in Sources */,
 				7FD96E8021799B9D00709701 /* Solution216.swift in Sources */,
 				7FD96E94217AD5D800709701 /* Solution16.swift in Sources */,
@@ -761,6 +790,7 @@
 				7FD96EAE217BD5D000709701 /* Solution45Test.swift in Sources */,
 				7F6541C42176971F00DB2813 /* Solution739Test.swift in Sources */,
 				7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */,
+				7F9DBD762180288D0033671C /* Solution217Test.swift in Sources */,
 				7FA4D317217C0A420089A31B /* Solution724.swift in Sources */,
 				7FD96E632178290200709701 /* Solution89.swift in Sources */,
 				7F9DBD47217D69370033671C /* Solution673.swift in Sources */,
