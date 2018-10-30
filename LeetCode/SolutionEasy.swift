@@ -72,4 +72,67 @@ class SolutionEasy: NSObject {
             idx -= 1
         }
     }
+
+    // LeetCode 38. Count and Say
+    func countAndSay(_ num: Int) -> String {
+        guard num > 0 else { return "" }
+        var array = ["1"]
+        for _ in 0 ..< 30 {
+            let chars = Array(array.last!)
+            var str = ""
+            var idx = 0
+            while idx < chars.count {
+                var cnt = 0
+                let char = chars[idx]
+                while idx < chars.count && chars[idx] == char {
+                    idx += 1
+                    cnt += 1
+                }
+                str.append("\(cnt)\(char)")
+            }
+            array.append(String(str))
+        }
+        return array[num - 1]
+    }
+
+    // LeetCode 168. Excel Sheet Column Title
+    func convertToTitle(_ num: Int) -> String {
+        let chars = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        var result = ""
+        var num = num
+        while num != 0 {
+            result.append(chars[(num - 1) % 26])
+            num = (num - 1) / 26
+        }
+        return String(result.reversed())
+    }
+
+    func convertToTitle1(_ num: Int) -> String {
+        let chars = Array("ZABCDEFGHIJKLMNOPQRSTUVWXY")
+        var result = ""
+        var num = num
+        while num != 0 {
+            result.append(chars[num % 26])
+            var mod = num % 26
+            if mod == 0 {
+                mod = 26
+            }
+            num = (num - mod) / 26
+        }
+        return String(result.reversed())
+    }
+
+    // 171. Excel Sheet Column Number
+    func titleToNumber(_ str: String) -> Int {
+        let chars = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        let strChars = Array(str)
+        var num = 0
+        var base = 1
+        for idx in (0 ..< str.count).reversed() {
+            let index = chars.firstIndex(of: strChars[idx])!
+            num += (index + 1) * base
+            base *= 26
+        }
+        return num
+    }
 }

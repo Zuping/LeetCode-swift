@@ -67,6 +67,31 @@ class SolutionBinaryTree: NSObject {
         }
         return result.reversed()
     }
+
+    // 111. Minimum Depth of Binary Tree
+    func minDepth(_ root: TreeNode?) -> Int {
+        guard root != nil else { return 0 }
+        var queue = [root!]
+        var count = 0
+        while !queue.isEmpty {
+            count += 1
+            var newQueue: [TreeNode] = []
+            for node in queue {
+                var emptyCnt = 0
+                if node.left == nil {
+                    emptyCnt += 1
+                } else {
+                    newQueue.append(node.left!)
+                }
+                if node.right == nil {
+                    emptyCnt += 1
+                } else {
+                    newQueue.append(node.right!)
+                }
+                if emptyCnt == 2 { return count }
+            }
+            queue = newQueue
+        }
+        return count
+    }
 }
-
-

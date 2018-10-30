@@ -48,4 +48,37 @@ class SolutionEasyTest: XCTestCase {
         solution.merge(&nums1, 0, nums2, 1)
         assert(nums1 == [1])
     }
+
+    // LeetCode 38. Count and Say
+    func test38_1() {
+        let result = solution.countAndSay(4)
+        assert(result == "1211")
+    }
+    func test38_2() {
+        let result = solution.countAndSay(5)
+        assert(result == "111221")
+    }
+    func test38_3() {
+        let result = solution.countAndSay(6)
+        assert(result == "312211")
+    }
+
+    // LeetCode 168. Excel Sheet Column Title
+    func test168_1() {
+        assert(solution.convertToTitle(130) == "DZ")
+        assert(solution.convertToTitle1(52) == "AZ")
+        assert(solution.convertToTitle1(26) == "Z")
+        assert(solution.convertToTitle1(28) == "AB")
+        assert(solution.convertToTitle1(701) == "ZY")
+        assert(solution.convertToTitle1(100) == "CV")
+    }
+
+    // 171. Excel Sheet Column Number
+    func test171_1() {
+        assert(solution.titleToNumber("ZZ") == 702)
+        assert(solution.titleToNumber("AZ") == 52)
+        assert(solution.titleToNumber("Z") == 26)
+        assert(solution.titleToNumber("AB") == 28)
+        assert(solution.titleToNumber("ZY") == 701)
+    }
 }
