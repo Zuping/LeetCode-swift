@@ -135,4 +135,19 @@ class SolutionEasy: NSObject {
         }
         return num
     }
+
+    // 283. Move Zeroes
+    func moveZeroes(_ nums: inout [Int]) {
+        guard nums.count > 0 else { return }
+        var index = 0
+        for idx in 0 ..< nums.count {
+            if nums[idx] != 0 {
+                nums[index] = nums[idx]
+                index += 1
+            }
+        }
+        for idx in index ..< nums.count {
+            nums[idx] = 0
+        }
+    }
 }

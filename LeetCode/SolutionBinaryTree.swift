@@ -94,4 +94,19 @@ class SolutionBinaryTree: NSObject {
         }
         return count
     }
+
+    // 112. Path Sum
+    func hasPathSum(_ root: TreeNode?, _ sum: Int) -> Bool {
+        guard root != nil else { return false }
+        return hasPathSumRecursion(root, sum)
+    }
+    func hasPathSumRecursion(_ root: TreeNode?, _ sum: Int) -> Bool {
+        if root == nil { return false }
+        if sum == root?.val {
+            if root?.left == nil && root?.right == nil {
+                return true
+            }
+        }
+        return hasPathSumRecursion(root?.left, sum - root!.val) || hasPathSumRecursion(root?.right, sum - root!.val)
+    }
 }
