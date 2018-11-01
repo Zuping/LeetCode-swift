@@ -8,6 +8,7 @@
 
 import Cocoa
 
+
 class SolutionEasy: NSObject {
     // LeetCode 20. Valid Parentheses
     func isValid(_ str: String) -> Bool {
