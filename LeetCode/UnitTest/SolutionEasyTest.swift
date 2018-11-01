@@ -81,4 +81,24 @@ class SolutionEasyTest: XCTestCase {
         assert(solution.titleToNumber("AB") == 28)
         assert(solution.titleToNumber("ZY") == 701)
     }
+
+    // 415. Add Strings
+    func test415_1() {
+        assert(solution.addStrings("0", "0") == "0")
+        assert(solution.addStrings("8", "9") == "17")
+        assert(solution.addStrings("11", "9") == "20")
+    }
+
+    // 61. Rotate List
+    func test61_1() {
+        let head = ListNode.buildList([1])
+        let result = solution.rotateRight(head, 0)
+        assert(ListNode.isEqualLinkedList(head!, result!))
+    }
+
+    // 189. Rotate Array
+    func test189_1() {
+        var arr = [1,2,3,4,5,6,7]
+        solution.rotate(&arr, 3)
+    }
 }

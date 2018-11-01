@@ -175,6 +175,9 @@
 		7FA4D325217C1B2A0089A31B /* Solution229.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4D324217C1B2A0089A31B /* Solution229.swift */; };
 		7FA4D326217C1B2A0089A31B /* Solution229.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4D324217C1B2A0089A31B /* Solution229.swift */; };
 		7FA4D32B217C1F110089A31B /* Solution229Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4D32A217C1F110089A31B /* Solution229Test.swift */; };
+		7FAAE8EC218A949500A5CDA1 /* Solution43.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8EB218A949500A5CDA1 /* Solution43.swift */; };
+		7FAAE8ED218A949500A5CDA1 /* Solution43.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8EB218A949500A5CDA1 /* Solution43.swift */; };
+		7FAAE8EF218A993600A5CDA1 /* Solution43Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8EE218A993600A5CDA1 /* Solution43Test.swift */; };
 		7FD96E112173070800709701 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E102173070800709701 /* main.swift */; };
 		7FD96E18217308D600709701 /* Solution917.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E17217308D600709701 /* Solution917.swift */; };
 		7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E21217313C000709701 /* LeetCodeTest.swift */; };
@@ -389,6 +392,8 @@
 		7FA4D322217C1A560089A31B /* Solution169Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution169Test.swift; sourceTree = "<group>"; };
 		7FA4D324217C1B2A0089A31B /* Solution229.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution229.swift; sourceTree = "<group>"; };
 		7FA4D32A217C1F110089A31B /* Solution229Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution229Test.swift; sourceTree = "<group>"; };
+		7FAAE8EB218A949500A5CDA1 /* Solution43.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution43.swift; sourceTree = "<group>"; };
+		7FAAE8EE218A993600A5CDA1 /* Solution43Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution43Test.swift; sourceTree = "<group>"; };
 		7FD96E0D2173070800709701 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD96E102173070800709701 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7FD96E17217308D600709701 /* Solution917.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution917.swift; sourceTree = "<group>"; };
@@ -494,6 +499,7 @@
 			children = (
 				7FD96E412174DBC500709701 /* UnitTest */,
 				7FD96E102173070800709701 /* main.swift */,
+				7FAAE8EB218A949500A5CDA1 /* Solution43.swift */,
 				7F02AB9A21880F5900633781 /* Solution200.swift */,
 				7F02AB952187FA2E00633781 /* SolutionDynamicProgramming.swift */,
 				7F02AB902187EDB600633781 /* Solution79.swift */,
@@ -679,6 +685,7 @@
 				7F02AB932187F15300633781 /* Solution79Test.swift */,
 				7F02AB982187FCB900633781 /* SolutionDynamicProgrammingTest.swift */,
 				7F02AB9D218810E500633781 /* Solution200Test.swift */,
+				7FAAE8EE218A993600A5CDA1 /* Solution43Test.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -779,7 +786,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#if which swiftlint >/dev/null; then\n#swiftlint\n#else\n#echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -827,6 +834,7 @@
 				7F281BBE2185012500EA1425 /* Solution78.swift in Sources */,
 				7F9DBD872181577B0033671C /* Solution697.swift in Sources */,
 				7F00F17B2177FE070025A71E /* Solution717.swift in Sources */,
+				7FAAE8EC218A949500A5CDA1 /* Solution43.swift in Sources */,
 				7F9DBD5A217EAFBB0033671C /* Solution53.swift in Sources */,
 				7F281BD221851CA000EA1425 /* Solution9.swift in Sources */,
 				7F02AB962187FA2E00633781 /* SolutionDynamicProgramming.swift in Sources */,
@@ -975,6 +983,7 @@
 				7F00F17E2178003A0025A71E /* Solution717.swift in Sources */,
 				7F3E81F02182BF5E00B4661F /* Solution516Test.swift in Sources */,
 				7FD96EA6217BCED200709701 /* Solution55Test.swift in Sources */,
+				7FAAE8EF218A993600A5CDA1 /* Solution43Test.swift in Sources */,
 				7FA4D321217C19A50089A31B /* Solution169.swift in Sources */,
 				7FA4D30F217C022C0089A31B /* Solution33Test.swift in Sources */,
 				7F9DBD4E217D71C30033671C /* Solution300Test.swift in Sources */,
@@ -1023,6 +1032,7 @@
 				7F9DBD60217EB7600033671C /* Solution152.swift in Sources */,
 				7F281BDA218520BF00EA1425 /* SolutionBitOperationTest.swift in Sources */,
 				7FD96E90217AD21200709701 /* Solution15Test.swift in Sources */,
+				7FAAE8ED218A949500A5CDA1 /* Solution43.swift in Sources */,
 				7FD96E83217ABB3500709701 /* Solution377.swift in Sources */,
 				7F6541CD2177A9D000DB2813 /* Solution46Test.swift in Sources */,
 				7F02AB7621857DD800633781 /* Solution127.swift in Sources */,
