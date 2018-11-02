@@ -193,6 +193,25 @@ class SolutionEasy: NSObject {
         return String(result.reversed())
     }
 
+    // 186. Reverse Words in a String II
+    func reverseWords(_ str: inout [Character]) {
+        guard str.count > 0 else { return }
+        var start = 0, end = 0
+        for idx in 0 ..< str.count {
+            if str[idx] != " " && idx != str.count - 1 {
+                end += 1
+            } else {
+                if idx == str.count - 1 {
+                    end += 1
+                }
+                str[start ..< end].reverse()
+                start = end + 1
+                end = start
+            }
+        }
+        str.reverse()
+    }
+
     // 189. Rotate Array
     func rotate(_ nums: inout [Int], _ k: Int) {
         guard nums.count > 0  else { return }
@@ -279,6 +298,24 @@ class SolutionEasy: NSObject {
         }
 
         return pre
+    }
+
+    // 414. Third Maximum Number
+    func thirdMax(_ nums: [Int]) -> Int {
+        var first = Int.min, second = Int.min, third = Int.min
+        for num in nums {
+            if num > first {
+                third = second
+                second = first
+                first = num
+            } else if num > second && num < first {
+                third = second
+                second = num
+            } else if num > third && num < second {
+                third = num
+            }
+        }
+        return third != Int.min ? third : first
     }
 
     // 415. Add Strings

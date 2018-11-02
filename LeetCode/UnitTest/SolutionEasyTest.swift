@@ -101,4 +101,17 @@ class SolutionEasyTest: XCTestCase {
         var arr = [1,2,3,4,5,6,7]
         solution.rotate(&arr, 3)
     }
+
+    // 414. Third Maximum Number
+    func test414_1() {
+        assert(solution.thirdMax([3, 2, 1]) == 1)
+        assert(solution.thirdMax([1, 2]) == 2)
+        assert(solution.thirdMax([2, 2, 3, 1]) == 1)
+    }
+
+    // 186. Reverse Words in a String II
+    func test186_1() {
+        var str = Array("the sky is blue")
+        solution.reverseWords(&str)
+    }
 }
