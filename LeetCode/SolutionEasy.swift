@@ -300,6 +300,21 @@ class SolutionEasy: NSObject {
         return pre
     }
 
+    // 387. First Unique Character in a String
+    func firstUniqChar(_ s: String) -> Int {
+        var map = [Character: Int]()
+        for char in s {
+            map[char] = map[char, default: 0] + 1
+        }
+        let chars = Array(s)
+        for idx in 0 ..< chars.count {
+            if map[chars[idx]] == 1 {
+                return idx
+            }
+        }
+        return -1
+    }
+
     // 414. Third Maximum Number
     func thirdMax(_ nums: [Int]) -> Int {
         var first = Int.min, second = Int.min, third = Int.min
@@ -383,5 +398,96 @@ class SolutionEasy: NSObject {
             node = next
         }
         return pre
+    }
+
+    // 451. Sort Characters By Frequency
+    func frequencySort(_ s: String) -> String {
+        guard s.count > 0 else { return "" }
+        var map: [Character: Int] = [:]
+        for char in s {
+            map[char] = map[char, default: 0] + 1
+        }
+        var counts = Array(repeating: [Character](), count: s.count)
+        for key in map.keys {
+            counts[map[key]! - 1].append(key)
+        }
+        var charArr = [Character]()
+        for idx in (0 ..< counts.count).reversed() {
+            for jdx in 0 ..< counts[idx].count {
+                charArr += Array(repeating: counts[idx][jdx], count: idx + 1)
+            }
+        }
+        return String(charArr)
+    }
+
+    // 692. Top K Frequent Words
+    func topKFrequent(_ words: [String], _ k: Int) -> [String] {
+        var map = [String: Int]()
+        for word in words {
+            map[word] = map[word, default: 0] + 1
+        }
+        var counts = Array(repeating: [String](), count: words.count)
+        for key in map.keys {
+            counts[map[key]! - 1].append(key)
+        }
+        var result = [String]()
+        for idx in (0 ..< counts.count).reversed() {
+            let arr = counts[idx].sorted()
+            for word in arr {
+                result.append(word)
+                if result.count == k {
+                    return result
+                }
+            }
+        }
+        return result
+    }
+}
+
+// 716. Max Stack
+class MaxStack {
+    var stack1: [Int] = []
+    var stack2: [Int] = []
+    init() { }
+
+    func push(_ x: Int) {
+        stack1.append(x)
+        if stack2.isEmpty || x >= stack2.last! {
+            stack2.append(x)
+        }
+    }
+
+    func pop() -> Int {
+        if stack1.last == stack2.last {
+            stack2.removeLast()
+        }
+        let top = stack1.last!
+        stack1.removeLast()
+        return top
+    }
+
+    func top() -> Int {
+        return stack1.last!
+    }
+
+    func peekMax() -> Int {
+        return stack2.last!
+    }
+
+    func popMax() -> Int {
+        let maxVal = stack2.last!
+        var tmpStack: [Int] = []
+        var index = stack1.count - 1
+        while index >= 0 && stack1[index] < maxVal {
+            tmpStack.append(stack1[index])
+            stack1.removeLast()
+            index -= 1
+        }
+        stack1.removeLast()
+        stack2.removeLast()
+        for idx in (0 ..< tmpStack.count).reversed() {
+            self.push(tmpStack[idx])
+        }
+        return maxVal
     }
 }

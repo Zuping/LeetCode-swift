@@ -114,4 +114,18 @@ class SolutionEasyTest: XCTestCase {
         var str = Array("the sky is blue")
         solution.reverseWords(&str)
     }
+
+    // 716. Max Stack
+    func test716() {
+        let maxStack = MaxStack()
+        maxStack.push(5)
+        maxStack.push(1)
+        maxStack.popMax()
+        maxStack.peekMax()
+    }
+
+    // 451. Sort Characters By Frequency
+    func test451() {
+        assert(solution.frequencySort("tree") == "eert")
+    }
 }

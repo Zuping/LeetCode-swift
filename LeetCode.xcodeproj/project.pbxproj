@@ -181,6 +181,14 @@
 		7FAAE8F1218C059500A5CDA1 /* Solution215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8F0218C059500A5CDA1 /* Solution215.swift */; };
 		7FAAE8F2218C059500A5CDA1 /* Solution215.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8F0218C059500A5CDA1 /* Solution215.swift */; };
 		7FAAE8F4218C06F700A5CDA1 /* Solution215Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8F3218C06F700A5CDA1 /* Solution215Test.swift */; };
+		7FAAE8F6218D341C00A5CDA1 /* Solution155.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8F5218D341C00A5CDA1 /* Solution155.swift */; };
+		7FAAE8F7218D341C00A5CDA1 /* Solution155.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8F5218D341C00A5CDA1 /* Solution155.swift */; };
+		7FAAE8F9218D391000A5CDA1 /* Solution155Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8F8218D391000A5CDA1 /* Solution155Test.swift */; };
+		7FAAE8FB218D403200A5CDA1 /* Solution347.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8FA218D403200A5CDA1 /* Solution347.swift */; };
+		7FAAE8FC218D403200A5CDA1 /* Solution347.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8FA218D403200A5CDA1 /* Solution347.swift */; };
+		7FAAE8FE218D420600A5CDA1 /* Solution347Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8FD218D420600A5CDA1 /* Solution347Test.swift */; };
+		7FAAE900218D5DE700A5CDA1 /* Solution703.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8FF218D5DE700A5CDA1 /* Solution703.swift */; };
+		7FAAE901218D5DE700A5CDA1 /* Solution703.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAAE8FF218D5DE700A5CDA1 /* Solution703.swift */; };
 		7FD96E112173070800709701 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E102173070800709701 /* main.swift */; };
 		7FD96E18217308D600709701 /* Solution917.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E17217308D600709701 /* Solution917.swift */; };
 		7FD96E22217313C000709701 /* LeetCodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD96E21217313C000709701 /* LeetCodeTest.swift */; };
@@ -399,6 +407,11 @@
 		7FAAE8EE218A993600A5CDA1 /* Solution43Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution43Test.swift; sourceTree = "<group>"; };
 		7FAAE8F0218C059500A5CDA1 /* Solution215.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution215.swift; sourceTree = "<group>"; };
 		7FAAE8F3218C06F700A5CDA1 /* Solution215Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution215Test.swift; sourceTree = "<group>"; };
+		7FAAE8F5218D341C00A5CDA1 /* Solution155.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution155.swift; sourceTree = "<group>"; };
+		7FAAE8F8218D391000A5CDA1 /* Solution155Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution155Test.swift; sourceTree = "<group>"; };
+		7FAAE8FA218D403200A5CDA1 /* Solution347.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution347.swift; sourceTree = "<group>"; };
+		7FAAE8FD218D420600A5CDA1 /* Solution347Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution347Test.swift; sourceTree = "<group>"; };
+		7FAAE8FF218D5DE700A5CDA1 /* Solution703.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution703.swift; sourceTree = "<group>"; };
 		7FD96E0D2173070800709701 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD96E102173070800709701 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7FD96E17217308D600709701 /* Solution917.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution917.swift; sourceTree = "<group>"; };
@@ -504,6 +517,9 @@
 			children = (
 				7FD96E412174DBC500709701 /* UnitTest */,
 				7FD96E102173070800709701 /* main.swift */,
+				7FAAE8FF218D5DE700A5CDA1 /* Solution703.swift */,
+				7FAAE8FA218D403200A5CDA1 /* Solution347.swift */,
+				7FAAE8F5218D341C00A5CDA1 /* Solution155.swift */,
 				7FAAE8F0218C059500A5CDA1 /* Solution215.swift */,
 				7FAAE8EB218A949500A5CDA1 /* Solution43.swift */,
 				7F02AB9A21880F5900633781 /* Solution200.swift */,
@@ -693,6 +709,8 @@
 				7F02AB9D218810E500633781 /* Solution200Test.swift */,
 				7FAAE8EE218A993600A5CDA1 /* Solution43Test.swift */,
 				7FAAE8F3218C06F700A5CDA1 /* Solution215Test.swift */,
+				7FAAE8F8218D391000A5CDA1 /* Solution155Test.swift */,
+				7FAAE8FD218D420600A5CDA1 /* Solution347Test.swift */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -834,6 +852,7 @@
 				7FD96E5A2176DDCE00709701 /* Solution556.swift in Sources */,
 				7FD96E9E217AF88C00709701 /* Solution128.swift in Sources */,
 				7F02AB9B21880F5900633781 /* Solution200.swift in Sources */,
+				7FAAE8F6218D341C00A5CDA1 /* Solution155.swift in Sources */,
 				7F281BC32185061600EA1425 /* Solution125.swift in Sources */,
 				7FAAE8F1218C059500A5CDA1 /* Solution215.swift in Sources */,
 				7FD96E18217308D600709701 /* Solution917.swift in Sources */,
@@ -851,6 +870,7 @@
 				7FD96EC1217BEC5300709701 /* DataModel.swift in Sources */,
 				7F281BB92184F98D00EA1425 /* Solution67.swift in Sources */,
 				7F6541B82176836900DB2813 /* Solution645.swift in Sources */,
+				7FAAE8FB218D403200A5CDA1 /* Solution347.swift in Sources */,
 				7F9DBD94218167BB0033671C /* Solution18.swift in Sources */,
 				7FD96E8E217ACF7B00709701 /* Solution15.swift in Sources */,
 				7FD96E502176BA2B00709701 /* Solution496.swift in Sources */,
@@ -877,6 +897,7 @@
 				7F6541C22176964A00DB2813 /* Solution739.swift in Sources */,
 				7FD96E482175903000709701 /* Solution287.swift in Sources */,
 				7F6541BD21768CF000DB2813 /* Solution299.swift in Sources */,
+				7FAAE900218D5DE700A5CDA1 /* Solution703.swift in Sources */,
 				7F6F04C7217E836B00B93A05 /* Solution720.swift in Sources */,
 				7F02AB82218681B700633781 /* SolutionBinaryTree.swift in Sources */,
 				7F3E81F22182C78C00B4661F /* Solution621.swift in Sources */,
@@ -912,6 +933,7 @@
 				7F3E81EE2182BE1200B4661F /* Solution516.swift in Sources */,
 				7F6541BB2176844400DB2813 /* Solution645.swift in Sources */,
 				7FD96E4C21759D8A00709701 /* Solution137Test.swift in Sources */,
+				7FAAE8F9218D391000A5CDA1 /* Solution155Test.swift in Sources */,
 				7F9DBD58217D7A9B0033671C /* Solution523Test.swift in Sources */,
 				7FD96E5D2176E14E00709701 /* Solution556.swift in Sources */,
 				7FD96EC2217BEC5300709701 /* DataModel.swift in Sources */,
@@ -950,10 +972,12 @@
 				7FD96E402174DBAF00709701 /* Solution389Test.swift in Sources */,
 				7F02AB9E218810E500633781 /* Solution200Test.swift in Sources */,
 				7FD96E2E217316D900709701 /* Solution345Test.swift in Sources */,
+				7FAAE8FE218D420600A5CDA1 /* Solution347Test.swift in Sources */,
 				7FD96EBC217BE99300709701 /* Solution118Test.swift in Sources */,
 				7F9DBD6C217ECB2F0033671C /* Solution122Test.swift in Sources */,
 				7FD96E582176C5F300709701 /* Solution503.swift in Sources */,
 				7F9DBD4C217D70A80033671C /* Solution300.swift in Sources */,
+				7FAAE8F7218D341C00A5CDA1 /* Solution155.swift in Sources */,
 				7FD96E6721782F4500709701 /* Solution49Test.swift in Sources */,
 				7F02AB922187EDB600633781 /* Solution79.swift in Sources */,
 				7F281BCB218510E600EA1425 /* Solution206Test.swift in Sources */,
@@ -1020,6 +1044,7 @@
 				7FD96EA4217BCDB400709701 /* Solution55.swift in Sources */,
 				7F02AB942187F15300633781 /* Solution79Test.swift in Sources */,
 				7FA4D31C217C12130089A31B /* Solution560.swift in Sources */,
+				7FAAE8FC218D403200A5CDA1 /* Solution347.swift in Sources */,
 				7F9DBD62217EBFC80033671C /* Solution152Test.swift in Sources */,
 				7F02AB8D2186BADA00633781 /* Solution56.swift in Sources */,
 				7F281BD321851CA000EA1425 /* Solution9.swift in Sources */,
@@ -1047,6 +1072,7 @@
 				7F6541CD2177A9D000DB2813 /* Solution46Test.swift in Sources */,
 				7F02AB7621857DD800633781 /* Solution127.swift in Sources */,
 				7FD96E7421783E4F00709701 /* Solution39Test.swift in Sources */,
+				7FAAE901218D5DE700A5CDA1 /* Solution703.swift in Sources */,
 				7FD96E6821782F7100709701 /* Solution49.swift in Sources */,
 				7FD96E3B217455C200709701 /* Solution557Test.swift in Sources */,
 				7FD96E532176BD6200709701 /* Solution496.swift in Sources */,
