@@ -58,4 +58,19 @@ class SolutionBinaryTreeTest: XCTestCase {
         assert(result == expectedResult)
     }
 
+    // // 103. Binary Tree Zigzag Level Order Traversal
+    func test103() {
+        let node1 = TreeNode(1)
+        let node2 = TreeNode(2)
+        let node3 = TreeNode(3)
+        let node4 = TreeNode(4)
+        let node5 = TreeNode(5)
+        node1.left = node2
+        node1.right = node3
+        node2.left = node4
+        node3.right = node5
+
+        let result = solution.zigzagLevelOrder(node1)
+    }
+
 }

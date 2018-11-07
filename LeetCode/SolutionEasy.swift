@@ -193,6 +193,21 @@ class SolutionEasy: NSObject {
         return String(result.reversed())
     }
 
+    // 179. Largest Number
+    func largestNumber(_ nums: [Int]) -> String {
+        var nums = nums.sorted(by: {
+            let str1 = String($0), str2 = String($1)
+            if str1.count == str2.count {
+                return $0 > $1
+            } else {
+                return str1 + str2 > str2 + str1
+            }
+        })
+        if nums[0] == 0 { return "0" }
+        let result = nums.reduce("", { String($0) + String($1) })
+        return result
+    }
+
     // 186. Reverse Words in a String II
     func reverseWords(_ str: inout [Character]) {
         guard str.count > 0 else { return }
@@ -245,6 +260,36 @@ class SolutionEasy: NSObject {
             base *= 26
         }
         return num
+    }
+
+    // 274. H-Index
+    func hIndex(_ citations: [Int]) -> Int {
+        guard citations.count > 0 else { return 0 }
+        var citations = Array(citations.sorted().reversed())
+        var index = 0
+        while index < citations.count {
+            if citations[index] <= index {
+                return index
+            }
+            index += 1
+        }
+        return index
+    }
+
+    func hIndexII(_ citations: [Int]) -> Int {
+        guard citations.count > 0 else { return 0 }
+        var i = 0, knownH = 0
+        while i < citations.count {
+            let proposedH = citations.count - i
+            let currentCitationCount = citations[i]
+            if currentCitationCount >= proposedH {
+                knownH = proposedH
+                break
+            }
+            i += 1
+        }
+
+        return knownH
     }
 
     // 283. Move Zeroes
@@ -442,6 +487,249 @@ class SolutionEasy: NSObject {
         }
         return result
     }
+
+    // 852. Peak Index in a Mountain Array
+    func peakIndexInMountainArray(_ A: [Int]) -> Int {
+        guard A.count >= 3 else { return -1 }
+        for idx in 1 ..< A.count - 1 {
+            if A[idx] > A[idx + 1] && A[idx] > A[idx - 1] {
+                return idx
+            }
+        }
+        return -1
+    }
+
+    // 69. Sqrt(x)
+    func mySqrt(_ x: Int) -> Int {
+        var l = 0, r = x
+        while l < r - 1 {
+            let mid = r - (r - l) / 2
+            let mid2 = mid * mid
+            if mid2 == x {
+                return mid
+            } else if mid2 > x {
+                r = mid
+            } else {
+                l = mid
+            }
+        }
+        let c1 = l, c2 = l + 1, c3 = l + 2
+        if c3 * c3 <= x {
+            return c3
+        }
+        if c2 * c2 < x {
+            return c2
+        }
+        return c1
+    }
+
+    // 367. Valid Perfect Square
+    func isPerfectSquare(_ num: Int) -> Bool {
+        var l = 0, r = num
+
+        while l < r {
+            let mid = l + (r - l) / 2
+            if mid * mid == num { return true }
+            if mid * mid <= num { l = mid + 1}
+            else { r = mid }
+        }
+        return false
+    }
+
+    // 50. Pow(x, n)
+    func myPow(_ x: Double, _ n: Int) -> Double {
+        guard n != 0 else { return 1 }
+        let absN = abs(n)
+        let result = helper(x, absN)
+        return n > 0 ? result : 1 / result
+    }
+
+    func helper(_ x: Double, _ n: Int) -> Double {
+        guard n != 0 else { return 1 }
+        var result = x
+        var current =  1
+        while current * 2 <= n {
+            result *= result
+            current += current
+        }
+        if current == n {
+            return result
+        } else {
+            return result * helper(x, n - current)
+        }
+    }
+
+    // 228. Summary Ranges
+    func summaryRanges(_ nums: [Int]) -> [String] {
+        var result = [String]()
+        guard nums.count > 0 else { return result }
+
+        var start = 0, end = 0
+        for i in 1 ..< nums.count {
+            
+            if nums[i] == (nums[i - 1] + 1) {
+                end += 1
+            } else {
+                if start < end {
+                    result.append("\(nums[start])->\(nums[end])")
+                } else {
+                    result.append(String(nums[start]))
+                }
+                start = i
+                end = i
+            }
+        }
+        if start < end {
+            result.append("\(nums[start])->\(nums[end])")
+        } else {
+            result.append(String(nums[start]))
+        }
+        return result
+    }
+
+    // 28. Implement strStr()
+    func strStr(_ haystack: String, _ needle: String) -> Int {
+        guard needle.count > 0 else { return 0 }
+        guard haystack.count > 0 else { return -1 }
+        let s = Array(haystack)
+        let t = Array(needle)
+        var i = 0
+        while i < s.count {
+            var j = 0
+            if s[i] == t[j] {
+                while j < t.count && i + j < s.count && s[i + j] == t[j] {
+                    j += 1
+                    continue
+                }
+                if j == t.count {
+                    return i
+                }
+            }
+            i += 1
+        }
+        return -1
+    }
+
+    // 54. Spiral Matrix
+    func spiralOrder(_ matrix: [[Int]]) -> [Int] {
+        guard matrix.count > 0 && matrix[0].count > 0 else { return [] }
+        var result = [Int]()
+
+        let len = matrix.count * matrix[0].count
+        var idx = 0, level = 0
+        while idx < len {
+            let lenH = matrix[0].count - level * 2 - 1
+            let lenV = matrix.count - level * 2 - 1
+            let row = level, col = level
+            level += 1
+            if lenH == 0 && lenV == 0 {
+                result.append(matrix[row][col])
+                break
+            }
+            if lenH == 0 {
+                for i in 0 ... lenV {
+                    result.append(matrix[row + i][col])
+                }
+                break
+            }
+            if lenV == 0 {
+                for i in 0 ... lenH {
+                    result.append(matrix[row][col + i])
+                }
+                break
+            }
+
+            // top
+            for i in 0 ..< lenH {
+                result.append(matrix[row][col + i])
+                idx += 1
+            }
+            if idx == len { break }
+
+            // right
+            for i in 0 ..< lenV {
+                result.append(matrix[row + i][col + lenH])
+                idx += 1
+            }
+            if idx == len { break }
+
+            // bottom
+            for i in (1 ... lenH).reversed() {
+                result.append(matrix[row + lenV][col + i])
+                idx += 1
+            }
+            if idx == len { break }
+
+            // left
+            for i in (1 ... lenV).reversed() {
+                result.append(matrix[row + i ][col])
+                idx += 1
+            }
+            if idx == len { break }
+
+        }
+
+        return result
+    }
+
+    // 463. Island Perimeter
+    func islandPerimeter(_ grid: [[Int]]) -> Int {
+        guard grid.count > 0 && grid[0].count > 0 else { return 0 }
+        var result = 0
+        var visited = Array(repeating: Array(repeating: false, count: grid[0].count), count: grid.count)
+        for i in 0 ..< grid.count {
+            for j in 0 ..< grid[0].count {
+                if grid[i][j] == 1 {
+                    recursionHelper(grid, i, j, &result, &visited)
+                    return result
+                }
+            }
+        }
+        return result
+    }
+
+    func recursionHelper(_ grid: [[Int]], _ x: Int, _ y: Int,
+                         _ res: inout Int, _ visited: inout [[Bool]]) {
+        if x < 0 || x == grid.count ||
+            y < 0 || y == grid[0].count ||
+            grid[x][y] == 0 {
+            return
+        }
+
+        visited[x][y] = true
+
+        let directions = [[1, 0], [-1, 0] , [0, 1], [0, -1]]
+        for dir in directions {
+            let xx = x + dir[0], yy = y + dir[1]
+            if xx < 0 || xx == grid.count || yy < 0 || yy == grid[0].count {
+                res += 1
+                continue
+            }
+            if grid[xx][yy] == 0 {
+                res += 1
+            } else if !visited[xx][yy] {
+                recursionHelper(grid, xx, yy, &res, &visited)
+            }
+        }
+    }
+
+    // 448. Find All Numbers Disappeared in an Array
+    func findDisappearedNumbers(_ nums: [Int]) -> [Int] {
+        var nums = nums
+        var result = [Int]()
+        for num in nums {
+            if num > 0 {
+                nums[num - 1] = -1
+            }
+        }
+        for idx in 0 ..< nums.count {
+            if nums[idx] > 0 {
+                result.append(idx + 1)
+            }
+        }
+        return result
+    }
+
 }
 
 // 716. Max Stack
@@ -489,5 +777,42 @@ class MaxStack {
             self.push(tmpStack[idx])
         }
         return maxVal
+    }
+}
+
+// 146. LRU Cache
+class LRUCache {
+    private var map = [Int: (Int, Int)]()
+    private var capacity = 0
+    private var t = 0
+    init(_ capacity: Int) {
+        self.capacity = capacity
+    }
+
+    func get(_ key: Int) -> Int {
+        t += 1
+        if let val = self.map[key]?.0 {
+            self.map[key] = (val, t)
+            return val
+        } else {
+            return -1
+        }
+    }
+
+    func put(_ key: Int, _ value: Int) {
+        t += 1
+        if self.map.count == self.capacity {
+            if self.map.keys.contains(key) {
+                self.map[key] = (value, t)
+            } else {
+                var old = 0, tmpT = t
+                for key in self.map.keys where map[key]!.1 < tmpT {
+                    tmpT = map[key]!.1
+                    old = key
+                }
+                map.removeValue(forKey: old)
+            }
+        }
+        self.map[key] = (value, t)
     }
 }
