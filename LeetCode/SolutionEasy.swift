@@ -730,6 +730,126 @@ class SolutionEasy: NSObject {
         return result
     }
 
+    // 442. Find All Duplicates in an Array
+    func findDuplicates(_ nums: [Int]) -> [Int] {
+        var result = [Int]()
+        guard nums.count > 0 else {
+            return result
+        }
+        var nums = nums
+        for num in nums {
+            if nums[abs(num) - 1] < 0 {
+                result.append(num)
+            } else {
+                nums[abs(num) - 1] = 0 - nums[abs(num) - 1]
+            }
+        }
+        return result
+    }
+
+    // 605. Can Place Flowers
+    func canPlaceFlowers(_ flowerbed: [Int], _ n: Int) -> Bool {
+        var left = -1, right = -1
+        var cnt = 0
+        for i in 0 ..< flowerbed.count {
+            if left == -1 && flowerbed[i] == 0 {
+                left = i
+                right = i
+                continue
+            }
+            if flowerbed[i] == 0 {
+                right += 1
+                continue
+            }
+
+            if flowerbed[i] == 1 {
+                var length = right - left + 1
+                if left == 0 {
+                    length += 1
+                }
+                cnt += (length - 1) / 2
+                left = -1
+                right = -1
+            }
+        }
+        if right >= left {
+            var length = right - left + 1
+            if left == 0 {
+                length += 1
+            }
+            if right == flowerbed.count - 1 {
+                length += 1
+            }
+            cnt += (length - 1) / 2
+        }
+        return cnt >= n
+    }
+
+    // 34. Find First and Last Position of Element in Sorted Array
+    func searchRange(_ nums: [Int], _ target: Int) -> [Int] {
+        guard nums.count > 0 else { return [-1, -1] }
+        var l = 0, r = nums.count - 1
+        while l < r {
+            let mid = l + (r - l) / 2
+            if nums[mid] == target {
+                l = mid
+                r = mid
+                while l - 1 >= 0 && nums[l - 1] == target {
+                    l -= 1
+                }
+                while r + 1 < nums.count && nums[r + 1] == target {
+                    r += 1
+                }
+                break
+            }
+            if nums[mid] < target {
+                l = mid + 1
+            } else {
+                r = mid - 1
+            }
+        }
+        if(nums[l] != target) {
+            return [-1, -1]
+        }
+
+        return [l, r]
+    }
+
+    // 256. Paint House
+    func minCost(_ costs: [[Int]]) -> Int {
+        guard costs.count > 0 else { return 0 }
+        var dp = Array(repeating: [0, 0 , 0], count: costs.count)
+        dp[0][0] = costs[0][0]
+        dp[0][1] = costs[0][1]
+        dp[0][2] = costs[0][2]
+        for idx in 1 ..< costs.count {
+            dp[idx][0] = min(dp[idx - 1][1], dp[idx - 1][2]) + costs[idx][0]
+            dp[idx][1] = min(dp[idx - 1][0], dp[idx - 1][2]) + costs[idx][1]
+            dp[idx][2] = min(dp[idx - 1][0], dp[idx - 1][1]) + costs[idx][2]
+        }
+        let arr = dp.last!
+        return min(arr[0], arr[1], arr[2])
+    }
+
+    // 243. Shortest Word Distance
+    func shortestDistance(_ words: [String], _ word1: String, _ word2: String) -> Int {
+        guard words.count > 0 else { return 0 }
+        var idx1 = [Int]()
+        var idx2 = [Int]()
+        for idx in 0 ..< words.count {
+            if words[idx] == word1 { idx1.append(idx) }
+            if words[idx] == word2 { idx2.append(idx) }
+        }
+        var minDistance = Int.max
+        let n = words.count
+        for i1 in idx1 {
+            for i2 in idx2 {
+                let tmp = min(abs(i1 - i2), i1 + n - i2, i2 + n - i1)
+                minDistance = min(tmp, minDistance)
+            }
+        }
+        return minDistance
+    }
 }
 
 // 716. Max Stack

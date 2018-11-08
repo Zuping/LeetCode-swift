@@ -200,12 +200,23 @@ class SolutionEasyTest: XCTestCase {
 
     // 463. Island Perimeter
     func test463() {
-        var arr = [[0,1,0,0],
+        let arr = [[0,1,0,0],
                    [1,1,1,0],
                    [0,1,0,0],
                    [1,1,0,0]]
-//        arr = [[1, 1, 0]]
         let res = solution.islandPerimeter(arr)
         assert(res == 16)
+    }
+
+    // 605. Can Place Flowers
+    func test605() {
+        assert(solution.canPlaceFlowers([1,0,0,0,1,0,0], 2) == true)
+        assert(solution.canPlaceFlowers([1,0,0,0,1], 1) == true)
+    }
+
+    // 34. Find First and Last Position of Element in Sorted Array
+    func test34() {
+        assert(solution.searchRange([5,7,7,8,8,10], 8) == [3, 4])
+        assert(solution.searchRange([1], 1) == [0, 0])
     }
 }

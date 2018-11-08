@@ -73,4 +73,18 @@ class SolutionBinaryTreeTest: XCTestCase {
         let result = solution.zigzagLevelOrder(node1)
     }
 
+    // 101. Symmetric Tree
+    func test101() {
+        let node1 = TreeNode(1)
+        let node2 = TreeNode(2)
+        let node3 = TreeNode(3)
+//        let node4 = TreeNode(3)
+//        let node5 = TreeNode(2)
+        node1.left = node2
+        node1.right = node3
+//        node2.left = node4
+//        node3.left = node5
+        assert(solution.isSymmetric(node1) == false)
+    }
+
 }

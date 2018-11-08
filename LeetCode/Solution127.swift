@@ -42,14 +42,4 @@ class Solution127: NSObject {
         let newWordList = wordList.filter({ !newQueue.contains($0) })
         return bfs(newQueue, target, newWordList, step + 1)
     }
-
-    func canReach(_ word1: String, _ word2: String) -> Bool {
-        let char1 = Array(word1)
-        let char2 = Array(word2)
-        var count = 0
-        for idx in 0 ..< char1.count where char1[idx] != char2[idx] {
-            count += 1
-        }
-        return count <= 1
-    }
 }

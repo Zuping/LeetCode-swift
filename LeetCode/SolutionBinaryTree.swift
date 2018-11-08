@@ -66,6 +66,18 @@ class SolutionBinaryTree: NSObject {
         return node
     }
 
+    // 101. Symmetric Tree
+    func isSymmetric(_ root: TreeNode?) -> Bool {
+        return isSymmetric(root?.left, root?.right)
+    }
+    func isSymmetric(_ left: TreeNode?, _ right: TreeNode?) -> Bool {
+        if left == nil && right != nil { return false }
+        if left != nil && right == nil { return false }
+        if left == nil && right == nil { return true }
+        if left?.val != right?.val { return false }
+        return isSymmetric(left?.left, right?.right) && isSymmetric(left?.right, right?.left)
+    }
+
     // LeetCode 102. Binary Tree Level Order Traversal
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
         guard root != nil else { return [] }
