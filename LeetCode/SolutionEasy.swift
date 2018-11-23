@@ -850,6 +850,384 @@ class SolutionEasy: NSObject {
         }
         return minDistance
     }
+
+    // 187. Repeated DNA Sequences
+    func findRepeatedDnaSequences(_ s: String) -> [String] {
+        guard s.count > 10 else {
+            return []
+        }
+        var set = Set<String>()
+        var result = Set<String>()
+        let chars = Array(s)
+        for i in 0 ..< chars.count - 9 {
+            let str = String(chars[i ... i + 9])
+            if set.contains(str) {
+                result.insert(str)
+            } else {
+                set.insert(str)
+            }
+        }
+        return Array(result)
+    }
+
+    // 205. Isomorphic Strings
+    func isIsomorphic(_ s: String, _ t: String) -> Bool {
+        guard s.count == t.count else { return false }
+        let ss = helperIsIsomorphic(s)
+        let tt = helperIsIsomorphic(t)
+        return ss == tt
+    }
+
+    func helperIsIsomorphic(_ s: String) -> String {
+        var dict = [Character: Int]()
+        var ss = ""
+        var count = 0
+        for c in s {
+            if let val = dict[c] {
+                ss.append("\(val)")
+            } else {
+                dict[c] = count
+                ss.append("\(count)")
+                count += 1
+            }
+        }
+        return ss
+    }
+
+    // 198. House Robber
+    func rob(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else { return 0 }
+        if nums.count == 1 { return nums[0] }
+        var dp = Array(repeating: Array(repeating: 0, count: nums.count), count: 2)
+        dp[1][0] = nums[0]
+        dp[1][1] = nums[1]
+        dp[0][1] = nums[0]
+
+        for i in 2 ..< nums.count {
+            dp[0][i] = max(dp[0][i - 1], dp[1][i - 1])
+            dp[1][i] = max(dp[0][i - 1], dp[1][i - 2]) + nums[i]
+        }
+        let tmp1 = max(dp[0][nums.count - 1], dp[1][nums.count - 1])
+        let tmp2 = max(dp[0][nums.count - 2], dp[1][nums.count - 2])
+        return max(tmp1, tmp2)
+    }
+
+    // 280. Wiggle Sort
+    func wiggleSort(_ nums: inout [Int]) {
+        guard nums.count > 0  else { return }
+        let copy = nums.sorted()
+        var idx = nums.count - 1
+        for i in stride(from: 1, to: nums.count, by: +2) {
+            nums[i] = copy[idx]
+            idx -= 1
+        }
+        idx = 0
+        for i in 0 ..< nums.count where i % 2 == 0 {
+            nums[i] = copy[idx]
+            idx += 1
+        }
+    }
+
+    // 406. Queue Reconstruction by Height
+    func reconstructQueue(_ people: [[Int]]) -> [[Int]] {
+        guard people.count > 0 else { return people }
+        let people = people.sorted(by: {
+            if $0[0] != $1[0] {
+                return $0[0] > $1[0]
+            } else {
+                return $0[1] < $1[1]
+            }
+        })
+        var result = [[Int]]()
+        for p in people {
+            result.insert(p, at: p[1])
+        }
+        return result
+    }
+
+    // 289. Game of Life
+    func gameOfLife(_ board: inout [[Int]]) {
+        guard board.count > 0 && board[0].count > 0 else {
+            return
+        }
+
+        let directions = [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]]
+        for i in 0 ..< board.count {
+            for j in 0 ..< board[0].count {
+                var count = 0
+                for dir in directions {
+                    let x = i + dir[0], y = j + dir[1]
+                    if x < 0 || x == board.count || y < 0 || y == board[0].count {
+                        continue
+                    }
+                    if board[x][y] % 10 == 1 {
+                        count += 1
+                    }
+                }
+
+                // less than 2, dead
+                if count < 2 {
+                    board[i][j] += 10
+                    continue
+                }
+
+                // keep living
+                if count >= 2 && count <= 3 && board[i][j] == 1 {
+                    board[i][j] += 20
+                    continue
+                }
+
+                // die due to over population
+                if count > 3 && board[i][j] == 1 {
+                    board[i][j] += 10
+                    continue
+                }
+
+                // become alive due to reproduction
+                if count == 3 && board[i][j] == 0 {
+                    board[i][j] += 20
+                    continue
+                }
+
+            }
+        }
+
+        for i in 0 ..< board.count {
+            for j in 0 ..< board[0].count {
+                if board[i][j] / 10 == 2 {
+                    board[i][j] = 1
+                } else {
+                    board[i][j] = 0
+                }
+            }
+        }
+    }
+
+    // 73. Set Matrix Zeroes
+    func setZeroes(_ matrix: inout [[Int]]) {
+        guard matrix.count > 0 && matrix[0].count > 0 else { return }
+        var verticalFlag = false, hortizontalFlag = false
+        for i in 0 ..< matrix.count {
+            if matrix[i][0] == 0 {
+                verticalFlag = true
+                break
+            }
+        }
+        for j in 0 ..< matrix[0].count {
+            if matrix[0][j] == 0 {
+                hortizontalFlag = true
+                break
+            }
+        }
+        for i in 1 ..< matrix.count {
+            for j in 1 ..< matrix[0].count {
+                if matrix[i][j] == 0 {
+                    matrix[0][j] = 0
+                    matrix[i][0] = 0
+                }
+            }
+        }
+        for i in 1 ..< matrix.count {
+            if matrix[i][0] == 0 {
+                for j in 1 ..< matrix[0].count {
+                    matrix[i][j] = 0
+                }
+            }
+        }
+        for j in 1 ..< matrix[0].count {
+            if matrix[0][j] == 0 {
+                for i in 1 ..< matrix.count {
+                    matrix[i][j] = 0
+                }
+            }
+        }
+        if verticalFlag {
+            for i in 0 ..< matrix.count {
+                matrix[i][0] = 0
+            }
+        }
+        if hortizontalFlag {
+            for j in 0 ..< matrix[0].count {
+                matrix[0][j] = 0
+            }
+        }
+    }
+
+    // 74. Search a 2D Matrix
+    func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+        guard matrix.count > 0 && matrix[0].count > 0 else  { return false }
+        var top = 0, bottom = matrix.count
+        while top < bottom {
+            let mid = top + (bottom - top) / 2
+            if matrix[mid].last! < target {
+                top = mid + 1
+            } else {
+                bottom = mid
+            }
+        }
+        let row = bottom
+        if row >= matrix.count {
+            return false
+        }
+        var l = 0, r = matrix[0].count
+        while l < r {
+            let mid = l + (r - l) / 2
+            if matrix[row][mid] == target {
+                return true
+            } else if matrix[row][mid] < target {
+                l = mid + 1
+            } else {
+                r = mid
+            }
+        }
+        return false
+    }
+
+    // 739. Daily Temperatures
+    func dailyTemperatures(_ T: [Int]) -> [Int] {
+        guard T.count > 0 else { return [] }
+        var stack = [[T.last!, T.count - 1]]
+        var result = [0]
+        for i in (0 ..< T.count - 1).reversed() {
+            while !stack.isEmpty && stack.last![0] <= T[i] {
+                stack.removeLast()
+            }
+            if stack.isEmpty {
+                result.insert(0, at: 0)
+            } else {
+                result.insert(stack.last![1] - i, at: 0)
+            }
+            stack.append([T[i], i])
+        }
+        return result
+    }
+
+    // 760. Find Anagram Mappings
+    func anagramMappings(_ A: [Int], _ B: [Int]) -> [Int] {
+        guard A.count > 0 else {
+            return []
+        }
+        var dict = [Int: [Int]]()
+        for i in 0 ..< B.count {
+            dict[B[i], default: [Int]()].append(i)
+        }
+        var map = Array(repeating: -1, count: A.count)
+        for i in 0 ..< A.count {
+            if let arr = dict[A[i]] {
+                map[i] = arr.first!
+                dict[A[i]]?.removeFirst()
+            }
+        }
+        return map
+    }
+
+    // 204. Count Primes
+    func countPrimes(_ n: Int) -> Int {
+        guard n > 1 else { return 0 }
+        var array = Array(repeating: 0, count: n)
+        for i in 2 ..< n {
+            if array[i] == 1 {
+                continue
+            }
+            var j = 2
+            while j * i < n {
+                array[j * i] = 1
+                j += 1
+            }
+        }
+        var cnt = 0
+        for i in 2 ..< n {
+            if array[i] == 0 {
+                cnt += 1
+            }
+        }
+        return cnt
+    }
+
+    // 929. Unique Email Addresses
+    func numUniqueEmails(_ emails: [String]) -> Int {
+        guard emails.count > 1 else { return emails.count }
+        var set = Set<String>()
+        for email in emails {
+            let arr = email.split(separator: "@")
+            let domain = String(arr[1])
+            var local = String(arr[0])
+            local = String(local.replacingOccurrences(of: ".", with: ""))
+            if let index = local.firstIndex(of: "+") {
+                local = String(local[local.startIndex ..< index])
+            }
+            set.insert(local + "@" + domain)
+        }
+        return set.count
+    }
+
+    // 3. Longest Substring Without Repeating Characters
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        guard s.count > 0 else { return 0 }
+        let chars = Array(s)
+        var set = Set<Character>()
+        var l = 0, r = 0, maxLen = 0
+        for i in 0 ..< chars.count {
+            let ch = chars[i]
+            if set.contains(ch) {
+                maxLen = max(maxLen, r - l)
+                while !set.isEmpty && set.contains(ch) {
+                    set.remove(chars[l])
+                    l += 1
+                }
+                set.insert(ch)
+                r += 1
+            } else {
+                set.insert(ch)
+                r += 1
+            }
+        }
+        maxLen = max(maxLen, r - l)
+        return maxLen
+    }
+
+    // 1. Two Sum
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        guard nums.count > 1 else {
+            return [0]
+        }
+        var tuples = [(Int, Int)]()
+        for i in 0 ..< nums.count {
+            tuples.append((nums[i], i))
+        }
+        tuples.sort(by: { return $0.0 < $1.0 })
+        var l = 0, r = nums.count - 1
+        while l < r {
+            let tmp = tuples[l].0 + tuples[r].0
+            if tmp == target {
+                return [tuples[l].1, tuples[r].1]
+            } else if tmp < target {
+                l += 1
+            } else {
+                r -= 1
+            }
+        }
+        return [0]
+    }
+
+    // 11. Container With Most Water
+    func maxArea(_ height: [Int]) -> Int {
+        guard height.count > 0 else {
+            return 0
+        }
+        var l = 0, r = height.count - 1
+        var maximum = 0
+        while l < r {
+            maximum = max(maximum, (r - l) * min(height[l], height[r]))
+            print("\(height[l]) \(height[r])")
+            if height[l] < height[r] {
+                l += 1
+            } else {
+                r -= 1
+            }
+        }
+        return maximum
+    }
 }
 
 // 716. Max Stack
@@ -934,5 +1312,45 @@ class LRUCache {
             }
         }
         self.map[key] = (value, t)
+    }
+}
+
+
+// 170. Two Sum III - Data structure design
+class TwoSum {
+
+    var array = [Int]()
+    /** Initialize your data structure here. */
+    init() { }
+
+    /** Add the number to an internal data structure.. */
+    func add(_ number: Int) {
+        if array.count == 0 || number > array[array.count - 1] {
+            array.append(number)
+        } else {
+            for i in 0 ..< array.count {
+                if array[i] < number {
+                    continue
+                } else {
+                    array.insert(number, at: i)
+                    break
+                }
+            }
+        }
+    }
+
+    /** Find if there exists any pair of numbers which sum is equal to the value. */
+    func find(_ value: Int) -> Bool {
+        var l = 0, r = array.count - 1
+        while l < r {
+            if array[l] + array[r] == value {
+                return true
+            } else if array[l] + array[r] < value {
+                l += 1
+            } else {
+                r -= 1
+            }
+        }
+        return false
     }
 }

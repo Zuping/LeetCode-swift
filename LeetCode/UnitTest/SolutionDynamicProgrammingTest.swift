@@ -20,11 +20,19 @@ class SolutionDynamicProgrammingTest: XCTestCase {
         assert(solution.wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"]) == false)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    // 279. Perfect Squares
+    func test279() {
+        assert(solution.numSquares(12) == 3)
+    }
+
+    // 221. Maximal Square
+    func test221() {
+        let matrix = [
+           Array("10100"),
+           Array("10111"),
+           Array("11111"),
+           Array("10010")]
+        assert(solution.maximalSquare(matrix) == 4)
     }
 
 }

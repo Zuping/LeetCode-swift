@@ -219,4 +219,78 @@ class SolutionEasyTest: XCTestCase {
         assert(solution.searchRange([5,7,7,8,8,10], 8) == [3, 4])
         assert(solution.searchRange([1], 1) == [0, 0])
     }
+
+    // 187. Repeated DNA Sequences
+    func test107() {
+        solution.findRepeatedDnaSequences("AAAAAAAAAAA")
+    }
+
+    // 198. House Robber
+    func test198() {
+        assert(solution.rob([2,1,1,2]) == 4)
+        assert(solution.rob([2,7,9,3,1]) == 12)
+        assert(solution.rob([1,2,3,1]) == 4)
+    }
+
+    // 406. Queue Reconstruction by Height
+    func test406() {
+        let queue = [[9,0],[7,0],[1,9],[3,0],[2,7],[5,3],[6,0],[3,4],[6,2],[5,2]]
+        let result = solution.reconstructQueue(queue)
+        let expectedRes = [[3,0],[6,0],[7,0],[5,2],[3,4],[5,3],[6,2],[2,7],[9,0],[1,9]]
+        assert(result == expectedRes)
+    }
+
+    // 289. Game of Life
+    func test289() {
+        var arr = [
+            [0,1,0],
+            [0,0,1],
+            [1,1,1],
+            [0,0,0]
+        ]
+        solution.gameOfLife(&arr)
+    }
+
+    // 74. Search a 2D Matrix
+    func test74() {
+//        let matrix = [
+//            [1,   3,  5,  7],
+//            [10, 11, 16, 20],
+//            [23, 30, 34, 50]
+//        ]
+//        assert(solution.searchMatrix(matrix, 3) == true)
+//        assert(solution.searchMatrix(matrix, 13) == false)
+//        assert(solution.searchMatrix(matrix, 34) == true)
+
+        let matrix1 = [[0], [1], [1], [1]]
+        assert(solution.searchMatrix(matrix1, 1) == true)
+        assert(solution.searchMatrix(matrix1, 2) == false)
+    }
+
+    // 739. Daily Temperatures
+    func test739() {
+        let T = [89,62,70,58,47,47,46,76,100,70]
+        let expectedRes = [8,1,5,4,3,2,1,1,0,0]
+        assert(solution.dailyTemperatures(T) == expectedRes)
+    }
+
+    // 204. Count Primes
+    func test284() {
+        assert(solution.countPrimes(2) == 0)
+        assert(solution.countPrimes(10) == 4)
+    }
+
+    // 3. Longest Substring Without Repeating Characters
+    func test3() {
+        assert(solution.lengthOfLongestSubstring("abcabcbb") == 3)
+        assert(solution.lengthOfLongestSubstring("bbbbb") == 1)
+        assert(solution.lengthOfLongestSubstring("pwwkew") == 3)
+    }
+
+    // 11. Container With Most Water
+    func test11_1() {
+        let height = [1,8,6,2,5,4,8,3,7]
+        assert(solution.maxArea(height) == 49)
+    }
+
 }

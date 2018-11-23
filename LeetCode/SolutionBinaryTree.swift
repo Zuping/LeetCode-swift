@@ -175,6 +175,24 @@ class SolutionBinaryTree: NSObject {
         return hasPathSumRecursion(root?.left, sum - root!.val) || hasPathSumRecursion(root?.right, sum - root!.val)
     }
 
+    // 156. Binary Tree Upside Down
+    func upsideDownBinaryTree(_ root: TreeNode?) -> TreeNode? {
+        guard let root = root else {
+            return nil
+        }
+
+        let parent = root, left = root.left, right = root.right
+        if left != nil {
+            let ret = upsideDownBinaryTree(left)
+            left?.left = right
+            left?.right = parent
+            parent.left = nil
+            parent.right = nil
+            return ret
+        }
+        return root
+    }
+
     // 222. Count Complete Tree Nodes
     func countNodes(_ root: TreeNode?) -> Int {
         guard root != nil else { return 0 }
@@ -194,5 +212,76 @@ class SolutionBinaryTree: NSObject {
         } else {
             return countNodes(root!.left) + countNodes(root!.right) + 1
         }
+    }
+
+    // 366. Find Leaves of Binary Tree
+    func findLeaves(_ root: TreeNode?) -> [[Int]] {
+        var result = [[Int]]()
+        dfsHelper(root, &result)
+        return result
+    }
+
+    func dfsHelper(_ root: TreeNode?, _ result: inout [[Int]]) -> Int {
+        guard let root = root else {
+            return -1
+        }
+        let curDepth = max(dfsHelper(root.left, &result), dfsHelper(root.right, &result)) + 1
+        if curDepth == result.count {
+            result.append([Int]())
+        }
+        result[curDepth].append(root.val)
+        return curDepth
+    }
+
+    // 515. Find Largest Value in Each Tree Row
+    func largestValues(_ root: TreeNode?) -> [Int] {
+        guard let root = root else { return [] }
+        var queue = [TreeNode]()
+        queue.append(root)
+        var result = [root.val]
+        while !queue.isEmpty {
+            var maximum = Int.min
+            var tmpQueue = [TreeNode]()
+            while !queue.isEmpty {
+                let node = queue[0]
+                queue.removeFirst()
+                if let left = node.left {
+                    tmpQueue.append(left)
+                    maximum = max(maximum, left.val)
+                }
+                if let right = node.right {
+                    tmpQueue.append(right)
+                    maximum = max(maximum, right.val)
+                }
+
+            }
+            if !tmpQueue.isEmpty {
+                result.append(maximum)
+            }
+            queue = tmpQueue
+        }
+        return result
+    }
+    
+    // 671. Second Minimum Node In a Binary Tree
+    func findSecondMinimumValue(_ root: TreeNode?) -> Int {
+        guard let root = root else {
+            return -1
+        }
+        let first = root.val
+        var second = Int.max
+        findSecondMinimumValueHelper(root, first, &second)
+        return second == Int.max ? -1 : second
+    }
+    
+    func findSecondMinimumValueHelper(_ node: TreeNode?, _ first: Int, _ second: inout Int) {
+        guard let node = node else {
+            return
+        }
+        if node.val != first {
+            second = min(second, node.val)
+        }
+        findSecondMinimumValueHelper(node.left, first, &second)
+        findSecondMinimumValueHelper(node.right, first, &second)
     }
 }
