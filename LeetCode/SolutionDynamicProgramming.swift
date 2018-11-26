@@ -111,4 +111,73 @@ class SolutionDynamicProgramming: NSObject {
         }
         return maxPlus
     }
+    
+    // 312. Burst Balloons
+    func maxCoins(_ nums: [Int]) -> Int {
+        guard nums.count > 0 else {
+            return 0
+        }
+        let n = nums.count
+        let nums = [1] + nums + [1]
+        var dp = Array(repeating: Array(repeating: 0, count: nums.count), count: nums.count)
+        for i in 1 ..< nums.count - 1 { 
+            dp[i][i] = nums[i - 1] * nums[i] * nums[i + 1]
+            print("\(dp[i][i]) \(nums[i - 1]) \(nums[i]) \(nums[i + 1])")
+        }
+        maxCoinsHelper(1, n, nums, &dp)
+        return dp[1][n]
+    }
+    
+    private func maxCoinsHelper(_ i: Int, _ j: Int, _ nums: [Int], _ dp: inout [[Int]]) -> Int {
+        print("\(i) \(j)")
+        if i > j { return 0 }
+        if dp[i][j] > 0 { return dp[i][j] }
+        var maximum = Int.min
+        for k in i ... j {
+            let tmp = maxCoinsHelper(i, k - 1, nums, &dp) + maxCoinsHelper(k + 1, j, nums, &dp) + nums[i - 1] * nums[k] * nums[j + 1]
+            maximum = max(tmp, maximum)
+        }
+        dp[i][j] = maximum
+        return maximum
+    }
+    
+    // 338. Counting Bits
+    func countBits(_ num: Int) -> [Int] {
+        if num == 0 { return [0] }
+        if num == 1 { return [0, 1] }
+        var res = [0, 1]
+        var cur = 1
+        for i in 2 ... num {
+            if cur * 2 == i {
+                res.append(1)
+                cur *= 2
+            } else {
+                res.append(res[cur] + res[i - cur])
+            }
+        }
+        return res
+    }
+    
+    // 746. Min Cost Climbing Stairs
+    func minCostClimbingStairs(_ cost: [Int]) -> Int {
+        if cost.count == 1 { return cost[0] }
+        if cost.count == 2 { return min(cost[0], cost[1]) }
+        var dp = Array(repeating: 0, count: cost.count + 1)
+        for i in 2 ..< dp.count {
+            dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2])
+        }
+        return dp.last!
+    }
+    
+    // 70. Climbing Stairs
+    func climbStairs(_ n: Int) -> Int {
+        if n == 1 { return 1 }
+        var dp = Array(repeating: 0, count: n + 1)
+        dp[0] = 1
+        dp[1] = 1
+        for i in 2 ... n {
+            dp[i] = dp[i - 1] + dp[i - 2]
+        }
+        return dp.last!
+    }
 }

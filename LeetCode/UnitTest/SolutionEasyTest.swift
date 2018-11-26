@@ -292,5 +292,25 @@ class SolutionEasyTest: XCTestCase {
         let height = [1,8,6,2,5,4,8,3,7]
         assert(solution.maxArea(height) == 49)
     }
+    
+    // 633. Sum of Square Numbers
+    func test633() {
+        assert(solution.judgeSquareSum(1) == true)
+        assert(solution.judgeSquareSum(4) == true)
+        assert(solution.judgeSquareSum(2) == true)
+        assert(solution.judgeSquareSum(5) == true)
+    }
+    
+    // 119. Pascal's Triangle II
+    func test119() {
+        assert(solution.getRow(4) == [1, 4, 6, 4, 1])
+        assert(solution.getRow(3) == [1, 3, 3, 1])
+    }
+    
+    // 682. Baseball Game
+    func test682() {
+        assert(solution.calPoints(["5","2","C","D","+"]) == 30)
+        assert(solution.calPoints(["5","-2","4","C","D","9","+","+"]) == 27)
+    }
 
 }

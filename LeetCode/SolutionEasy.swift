@@ -1228,6 +1228,66 @@ class SolutionEasy: NSObject {
         }
         return maximum
     }
+    
+    // 633. Sum of Square Numbers
+    func judgeSquareSum(_ c: Int) -> Bool {
+        var squares = [Int]()
+        var i = 0
+        while i * i <= c {
+            squares.append(i * i)
+            i += 1
+        }
+        var l = 0, r = squares.count - 1
+        
+        while l <= r {
+            let sum = squares[l] + squares[r]
+            if sum == c { 
+                return true
+            } else if sum < c {
+                l += 1
+            } else {
+                r -= 1
+            }
+        }
+        return false
+    }
+    
+    // 119. Pascal's Triangle II
+    func getRow(_ rowIndex: Int) -> [Int] {
+        var arr = [1]
+        var idx = 1
+        while idx <= rowIndex {
+            var tmp = [Int]()
+            for i in 0 ... idx {
+                if i == 0 || i == idx {
+                    tmp.append(1)
+                } else {
+                    tmp.append(arr[i - 1] + arr[i])
+                }
+            }
+            idx += 1
+            arr = tmp
+        }
+        return arr
+    }
+    
+    // 682. Baseball Game
+    func calPoints(_ ops: [String]) -> Int {
+        guard ops.count > 0 else { return 0 }
+        var stack = [Int]()
+        for op in ops {
+            if op == "C" {
+                stack.removeLast()
+            } else if op == "D" {
+                stack.append(stack.last! * 2)
+            } else if op == "+" {
+                stack.append(stack[stack.count - 1] + stack[stack.count - 2])
+            } else {
+                stack.append(Int(op)!)
+            }
+        }
+        return stack.reduce(0, +)
+    }
 }
 
 // 716. Max Stack

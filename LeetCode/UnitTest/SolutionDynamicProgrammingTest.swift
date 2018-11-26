@@ -34,5 +34,29 @@ class SolutionDynamicProgrammingTest: XCTestCase {
            Array("10010")]
         assert(solution.maximalSquare(matrix) == 4)
     }
+    
+    // 312. Burst Balloons
+    func test312() {
+        let nums = [3,1,5,8]
+        assert(solution.maxCoins(nums) == 167)
+    }
+    
+    // 338. Counting Bits
+    func test338() {
+        assert(solution.countBits(7) == [0, 1, 1, 2, 1, 2, 2, 3])
+        assert(solution.countBits(2) == [0, 1, 1])
+    }
+    
+    // 746. Min Cost Climbing Stairs
+    func test746() {
+//        assert(solution.minCostClimbingStairs([10, 15, 20]) == 15)
+        assert(solution.minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]) == 6)
+    }
+    
+    // 70. Climbing Stairs
+    func test70() {
+        assert(solution.climbStairs(1) == 1)
+        assert(solution.climbStairs(3) == 3)
+    }
 
 }
