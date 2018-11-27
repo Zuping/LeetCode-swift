@@ -173,4 +173,5 @@ class SolutionLinkedList: NSObject {
         }
         return dummyHead.next
     }
+    
 }

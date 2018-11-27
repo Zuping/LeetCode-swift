@@ -1288,6 +1288,16 @@ class SolutionEasy: NSObject {
         }
         return stack.reduce(0, +)
     }
+    
+    // 771. Jewels and Stones
+    func numJewelsInStones(_ J: String, _ S: String) -> Int {
+        var set = Set<Character>(Array(J))
+        var count = 0
+        for s in S where set.contains(s) {
+            count += 1
+        }
+        return count
+    }
 }
 
 // 716. Max Stack

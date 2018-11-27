@@ -10,17 +10,19 @@ import XCTest
 
 class RandomizedSetTest: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test1() {
+        // ["RandomizedSet","insert","remove","insert","remove","getRandom","getRandom","getRandom","getRandom","getRandom","getRandom","getRandom","getRandom","getRandom","getRandom"]
+        // [[],[0],[0],[-1],[0],[],[],[],[],[],[],[],[],[],[]]
+        let set = RandomizedSet()
+        set.insert(0)
+        set.remove(0)
+        set.insert(-1)
+        set.remove(0)
+        set.getRandom()
+        set.getRandom()
+        set.getRandom()
+        set.getRandom()
+        set.getRandom()
     }
 
     func testPerformanceExample() {

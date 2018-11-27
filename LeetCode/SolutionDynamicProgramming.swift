@@ -180,4 +180,32 @@ class SolutionDynamicProgramming: NSObject {
         }
         return dp.last!
     }
+    
+    // 464. Can I Win
+    func canIWin(_ maxChoosableInteger: Int, _ desiredTotal: Int) -> Bool {
+        if desiredTotal == 0 { return true }
+        
+        //it shows that we add all of them but can't get desiredTotal
+        if (1 + maxChoosableInteger) * maxChoosableInteger / 2 < desiredTotal {
+            return false
+        }
+        var states: [Bool?] = Array(repeating: nil, count: 1 << maxChoosableInteger)
+        return canIWinHelper(maxChoosableInteger, 0, desiredTotal, &states)
+    }
+    
+    func canIWinHelper(_ maxChoosableInteger: Int, _ chosenIntegers : Int, _ desiredTotal: Int, _ states: inout [Bool?]) -> Bool {
+        if let state = states[chosenIntegers] { return state }
+        for i in 1 ... maxChoosableInteger where ((1 << (i - 1)) & chosenIntegers) == 0{
+            if i >= desiredTotal || 
+                canIWinHelper(maxChoosableInteger, 
+                              ((1 << (i - 1)) | chosenIntegers), 
+                              desiredTotal - i, 
+                              &states) == false {
+                states[chosenIntegers] = true
+                return true
+            }
+        }
+        states[chosenIntegers] = false
+        return false
+    }
 }

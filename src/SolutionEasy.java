@@ -75,4 +75,24 @@ public class SolutionEasy {
         }
         return ans;
     }
+
+    // 160. Intersection of Two Linked Lists
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode p1 = headA, p2 = headB;
+        int cnt = 0;
+        while (p1 != null && p2 != null && cnt < 3) {
+            if (p1 == p2) { return p1; }
+            p1 = p1.next;
+            if (p1 == null) {
+                p1 = headB;
+                cnt++;
+            }
+            p2 = p2.next;
+            if (p2 == null) {
+                p2 = headA;
+                cnt++;
+            }
+        }
+        return null;
+    }
 }

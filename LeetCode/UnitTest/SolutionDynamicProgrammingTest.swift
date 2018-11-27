@@ -58,5 +58,11 @@ class SolutionDynamicProgrammingTest: XCTestCase {
         assert(solution.climbStairs(1) == 1)
         assert(solution.climbStairs(3) == 3)
     }
+    
+    // 464. Can I Win
+    func test464() {
+        assert(solution.canIWin(10, 11) == false)
+        assert(solution.canIWin(1, 1) == true)
+    }
 
 }

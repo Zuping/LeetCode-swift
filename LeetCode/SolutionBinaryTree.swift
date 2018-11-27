@@ -284,4 +284,48 @@ class SolutionBinaryTree: NSObject {
         findSecondMinimumValueHelper(node.left, first, &second)
         findSecondMinimumValueHelper(node.right, first, &second)
     }
+    
+    // 199. Binary Tree Right Side View
+    func rightSideView(_ root: TreeNode?) -> [Int] {
+        guard let root = root else {
+            return []
+        }
+        var queue = [root]
+        var res = [Int]()
+        while !queue.isEmpty {
+            res.append(queue.last!.val)
+            var tmpQueue = [TreeNode]()
+            while !queue.isEmpty {
+                let node = queue.removeFirst()
+                if let left = node.left {
+                    tmpQueue.append(left)
+                }
+                if let right = node.right {
+                    tmpQueue.append(right)
+                }
+                
+            }
+            queue = tmpQueue
+        } 
+        return res
+    }
+    
+    // 617. Merge Two Binary Trees
+    func mergeTrees(_ t1: TreeNode?, _ t2: TreeNode?) -> TreeNode? {
+        if t1 == nil && t2 == nil {
+            return nil
+        }
+        let node = TreeNode(0)
+        if let t1 = t1 {
+            node.val += t1.val
+        }
+        
+        if let t2 = t2 {
+            node.val += t2.val
+        }
+        
+        node.left = mergeTrees(t1?.left, t2?.left)
+        node.right = mergeTrees(t1?.right, t2?.right)
+        return node
+    }
 }
